@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <title>Proximity Analysis</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+    <link rel="stylesheet" type="text/css" media="screen" href="/public/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="/public/css/Chart.min.css">
+    <link rel="stylesheet" type='text/css' media="screen" href="/public/css/main.css">
+</head>
+
+<body>
+<nav class="navbar navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">
+        Proximity Analysis
+    </a>
+    <button class="btn btn-outline-secondary">
+        Logout
+    </button>
+</nav>
+<div class="d-flex flex-row ml-auto mt-4 w-75">
+    <div class="input-group ml-auto w-25">
+        <div class="input-group-prepend ">
+            <span class="input-group-text">From</span>
+        </div>
+        <input type="date" class="form-control" id="fromDate">
+    </div>
+    <div class="input-group pl-4 pr-4 w-25">
+        <div class="input-group-prepend">
+            <span class="input-group-text">To</span>
+        </div>
+        <input type="date" class="form-control" id="todate">
+    </div>
+</div>
+<div class="table-responsive pl-4 pr-4 mt-4">
+    <table class="table table-borderless">
+        <thead class="text-primary bg-light">
+        <tr>
+            <th scope="col">AP Name</th>
+            <th scope="col">Description</th>
+            <th scope="col">Users</th>
+            <th scope="col">Avg. Sessions</th>
+            <th scope="col">Repeat Users</th>
+            <th></th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr id="row1" class="border-top">
+            <td>MAC 1</td>
+            <td>Melbourne Railway Station</td>
+            <td>189545</td>
+            <td>00:33:10</td>
+            <td>54211</td>
+            <td>
+                <button id="btn1" class="btn btn-primary" onclick="makeCharts();makeCharts2();makeCharts3();">
+                    More Details
+                </button>
+            </td>
+        </tr>
+        <tr id="chartRow1" class="border border-top-0 border-primary d-none fade-in">
+            <td colspan="6">
+                <!-- This is where the charts should go -->
+
+
+                <!-- demo charts -->
+                <div class="row mainChart" >
+
+                    <div class="col-4 chart" >
+                        <canvas id="myChart" height="100" width="200"></canvas>
+                    </div>
+                    <div class="col-4 chart">
+                        <canvas id="myChartDailyUsers" height="100" width="200"></canvas>
+                    </div>
+                    <div class="col-4 chart">
+                     <canvas id="myChart3" width="200" height="100"></canvas>
+                    </div>
+
+
+                </div>
+                <!-- demo chart end -->
+
+
+            </td>
+        </tr>
+        <tr class="border-top">
+            <td>MAC 2</td>
+            <td>Footscray Library</td>
+            <td>1895</td>
+            <td>02:33:10</td>
+            <td>511</td>
+            <td>
+                <button class="btn btn-primary">
+                    More Details
+                </button>
+            </td>
+        </tr>
+        <tr class="border-top">
+            <td>MAC 3</td>
+            <td>Brisbane City Center</td>
+            <td>3945</td>
+            <td>00:13:10</td>
+            <td>5411</td>
+            <td>
+                <button class="btn btn-primary">
+                    More Details
+                </button>
+            </td>
+        </tr>
+        <tr class="border-top">
+            <td>MAC 4</td>
+            <td>Melbourne Railway Station</td>
+            <td>189545</td>
+            <td>00:33:10</td>
+            <td>54211</td>
+            <td>
+                <button class="btn btn-primary">
+                    More Details
+                </button>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+<script src="/public/js/jquery-3.5.0.slim.js"type="text/javascript"></script>
+<script src="/public/js/bootstrap.min.js" type="text/javascript"></script>
+<script src="/public/js/main.js" type="text/javascript"></script>
+
+</body>
+
+</html>

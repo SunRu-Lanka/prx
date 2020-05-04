@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"></script>
+
+    <link rel="stylesheet" href="/public/css/main.css">
+</head>
+<body>
+<h1>Total Number Of Users Chart</h1>
+<div class="container">
+    <canvas id="myChart" width="400" height="200"></canvas>
+</div>
+<script src="/public/js/main.js" type="text/javascript"></script>
+<script>
+    document.querySelector('#btn1').onclick = makeCharts;
+    function makeCharts() {
+        var xhr = new XMLHttpRequest();
+        xhr.open('GET','/avgDTime', true);
+        xhr.onreadystatechange = function() {
+            if(xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200){
+                var dataJson = JSON.parse(xhr.responseText)
+                alert(dataJson)
+                var labels=dataJson.map(function (e) {
+                    return e.cpatured_date;
+
+                });
+                var data =dataJson.map(function (e) {
+                    return e.captured_time_dw;
+
+                });
+                var ctx = document.querySelector("#myChartDailyUsers").getContext('2d');
+                new Chart(ctx, {
+                    type: 'bar',
+                    data: {
+                        labels:labels,
+                        datasets: [{
+                            label:'dwTime',
+                            backgroundColor:['rgb( 139, 140, 139)','rgb( 86, 89, 2)','rgb( 111, 115, 7)',
+                                'rgb( 215, 217, 163)','rgb( 62, 64, 1)','rgb( 139, 140, 139)','rgb( 86, 89, 2)','rgb( 111, 115, 7)',
+                                'rgb( 215, 217, 163)','rgb( 62, 64, 1)'] ,
+                            borderColor: ['rgb( 139, 140, 139)','rgb( 86, 89, 2)','rgb( 111, 115, 7)',
+                                'rgb( 215, 217, 163)','rgb( 62, 64, 1)','rgb( 139, 140, 139)','rgb( 86, 89, 2)','rgb( 111, 115, 7)',
+                                'rgb( 215, 217, 163)','rgb( 62, 64, 1)'],
+
+
+                            data:data,
+                        }]
+                    }
+                });
+            }
+        };
+        xhr.send();
+
+    }
+
+
+
+
+
+
+
+</script>
+</body>
+</html>

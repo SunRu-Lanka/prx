@@ -1,0 +1,14 @@
+.chart{
+    background-color: #D5E5F2;
+    border: 2px solid #A7C6D9;
+    height: 300px;
+}
+.chart:first-child{
+    border-right: 0;
+}
+.chart:last-child{
+    border-left: 0;
+}
+.mainChart{
+    padding:0 15px 0 15px;
+}

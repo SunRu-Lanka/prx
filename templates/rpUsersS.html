@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"></script>
+    <script src="/public/js/main.js"></script>
+</head>
+<body>
+
+
+<h1>Total Rp Users Chart</h1>
+<div class="container">
+    <canvas id="myChart" width="400" height="200"></canvas>
+</div>
+<script>
+    document.querySelector('h1').onclick = makeCharts;
+    function makeCharts() {
+        var xhr = new XMLHttpRequest();
+        xhr.open('GET','/rpUsers', true);
+        xhr.onreadystatechange = function() {
+            if(xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200){
+                var dataJson = JSON.parse(xhr.responseText)
+                alert(dataJson)
+                var labels=dataJson.map(function (e) {
+                    return e.p_date;
+
+                });
+                var data =dataJson.map(function (e) {
+                    return e.rp_count;
+
+                });
+                var ctx = document.querySelector("#myChart").getContext('2d');
+                new Chart(ctx, {
+                    type: 'bar',
+                    data: {
+                        labels:labels,
+                        datasets: [{
+                            label: 'users',
+                            backgroundColor: 'rgb(255, 99, 132)',
+                            borderColor: 'rgb(255, 99, 132)',
+                            data:data,
+                        }]            }
+                });
+            }
+        };
+        xhr.send();
+
+    }
+
+</script>
+</body>
+</html>
