@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<style>
+    .highlight {
+        background-color: yellow;
+    }
+</style>
+
+<form name="TestForm" action="test.php" id="TestForm">
+    First :
+    <input type="text" name="fname" id="fname" value="mike" />
+    <br> Last :
+    <input type="text" name="lname" id="lname" value="smith" />
+    <br> Age : :
+    <input type="number" name="age" id="age" value="50" />
+    <br>
+    <input type="submit">
+</form>
+
+<div id="output"></div>
+<div id="status"></div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script>
+    $(document).ready(function () {
+        myOutput();
+        $('#output').on('click', '.remo', function () {
+            var c = $(this).hasClass("highlight");
+            c = (c ? 1 : 0);
+            //c = 1 - c;
+            c ^= 1;
+            var vars = {
+                uid: this.getAttribute('data-value'),
+                c: c
+            };
+            $.post('update.php', vars, function (data) {
+                console.log(data);
+                myOutput();
+        })
+
+        function myOutput() {
+            $.getJSON('data.php', function (data) {
+                $('#output').html('<h1>People List</h1>');
+                $.each(data, function (i, item) {
+                    console.log(item);
+                    var deClass = ' ';
+                    if (item.checked == 1) {
+                        deClass = ' highlight ';
+                    }
+                    $('#output').append('<div class="remo ' + deClass + '" data-value="' + item.id + '" >' + data[i].first + ' ' + data[i].last + '(' + data[i].age + ') </div>');
+                })
+            })
+        }
+    })
+</script>
+
+</body>
+</html>

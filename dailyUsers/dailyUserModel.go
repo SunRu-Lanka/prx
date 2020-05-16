@@ -1,9 +1,12 @@
 package dailyUsers
 
 import (
+	"context"
 	"fmt"
 	"github.com/sudesh35139/prx/config"
+	"io/ioutil"
 	"net/http"
+	"strings"
 	"time"
 )
 
@@ -18,36 +21,43 @@ type DailyUse struct {
 	NumOfUser int32 `json:"num_of_user"`
 	//NumOfRepUser int32 `json:"num_of_rep_user"`
 	//AvgDwellTime time.Time `json:"avg_dwell_time"`
-	FromDate time.Time
-	ToDate time.Time
+	fromDate time.Time
+	toDate time.Time
 	//MinCapturedTime time.Time `json:"min_captured_time"`
 	//MaxCapturedTime time.Time `json:"max_captured_time"`
 
 }
 
+var (
+	ctx context.Context
+)
 func TotDailyUser(r *http.Request)([]DailyUse,error) {
 	dUser :=DailyUse{}
-	//taken value from daily user html form(select date range from date and to date.
-	//  fromDateStart := r.FormValue("fromDate")
-	// toDateEnd := r.FormValue("toDate")
-	//if fromDateStart ==""||toDateEnd ==""{
-	//	fmt.Println("error  4")
-	//	return nil,errors.New("FromDate or ToDate cannot be null")
-	//}
-	////Chang Date format Patten
-	//DFrom,err :=time.Parse("2006-01-02",fromDateStart)
-	//if err!= nil{
-	//	return nil,errors.New("406 not acceptable.wrong format")
-	//}
-	//dUser.FromDate = DFrom
-	//DTo,err :=time.Parse("2006-01-02",toDateEnd)
-	//if err!= nil{
-	//	return nil,errors.New("406 not acceptable.wrong format")
-	//}
-	//dUser.ToDate = DTo
+
+	req ,err :=ioutil.ReadAll(r.Body)
+
+	if err !=nil{
+		fmt.Println("nill data",err)
+	}
+	reqs := string(req)
+	fmt.Println("check value",reqs)
+	if len (reqs) == 0{
+		fmt.Println("empty string")
+
+	}
+	spiletDate := strings.Split(reqs,"&")
+	fromDateStartV:= spiletDate[0]
+	fromdateCha:= fromDateStartV[8:]
+	fmt.Println("Spilt date ###",fromdateCha)
+	toDateEndV := spiletDate[1]
+	toDateCha := toDateEndV[6:]
+
+	fmt.Println("spilt End date",toDateCha)
+
+	//"SELECT * FROM users WHERE "+timeColoumn+" BETWEEN '"+formatedFrom+"' AND '"+formatedTo+"'"
 
 	//number of people  count from given time periods.
-	rows,err := config.DB.Query("SELECT date(capturedtime)as 'CapturedTime', count(*)as'NumOfUser'FROM proximity.`6c-3b-6b-68-e4-f3`where capturedtime between '2020-01-10' and '2020-02-11'group by date(capturedtime)order by capturedtime")
+	rows,err := config.DB.Query("SELECT date(capturedtime)as CapturedTime, count(*)as NumOfUser FROM proximity.`6c-3b-6b-68-e4-f3`where capturedtime between '"+fromdateCha+"' and '"+toDateCha+"' group by date(capturedtime)order by capturedtime")
 	if err != nil{
 
 		fmt.Println("Empty row from number of daily users",err)
@@ -64,7 +74,7 @@ func TotDailyUser(r *http.Request)([]DailyUse,error) {
 
 		}
 		dailyUsers=append(dailyUsers,dUser)
-		//fmt.Println("daily users value",dailyUsers)
+		fmt.Println("daily users value",dailyUsers)
 	}
 	if err = rows.Err();err != nil{
 		panic(err)

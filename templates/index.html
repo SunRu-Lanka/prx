@@ -9,6 +9,8 @@
     <link rel="stylesheet" type="text/css" media="screen" href="/public/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" media="screen" href="/public/css/Chart.min.css">
     <link rel="stylesheet" type='text/css' media="screen" href="/public/css/main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
 </head>
 
 <body>
@@ -20,113 +22,504 @@
         Logout
     </button>
 </nav>
-<div class="d-flex flex-row ml-auto mt-4 w-75">
-    <div class="input-group ml-auto w-25">
-        <div class="input-group-prepend ">
-            <span class="input-group-text">From</span>
+
+    <div class="d-flex flex-row ml-auto mt-4 w-75">
+        <div class="input-group ml-auto w-25">
+
+            <div class="input-group-prepend ">
+                <span class="input-group-text">From</span>
+            </div>
+            <input type="date" class="form-control"  id="fromDate">
         </div>
-        <input type="date" class="form-control" id="fromDate">
-    </div>
-    <div class="input-group pl-4 pr-4 w-25">
-        <div class="input-group-prepend">
-            <span class="input-group-text">To</span>
+        <div class="input-group pl-4 pr-4 w-25">
+            <div class="input-group-prepend">
+                <span class="input-group-text">To</span>
+            </div>
+            <input type="date" class="form-control"  id="toDate">
         </div>
-        <input type="date" class="form-control" id="todate">
     </div>
-</div>
-<div class="table-responsive pl-4 pr-4 mt-4">
-    <table class="table table-borderless">
-        <thead class="text-primary bg-light">
-        <tr>
-            <th scope="col">AP Name</th>
-            <th scope="col">Description</th>
-            <th scope="col">Users</th>
-            <th scope="col">Avg. Sessions</th>
-            <th scope="col">Repeat Users</th>
-            <th></th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr id="row1" class="border-top">
-            <td>MAC 1</td>
-            <td>Melbourne Railway Station</td>
-            <td>189545</td>
-            <td>00:33:10</td>
-            <td>54211</td>
-            <td>
-                <button id="btn1" class="btn btn-primary" onclick="makeCharts();makeCharts2();makeCharts3();">
-                    More Details
-                </button>
-            </td>
-        </tr>
-        <tr id="chartRow1" class="border border-top-0 border-primary d-none fade-in">
-            <td colspan="6">
-                <!-- This is where the charts should go -->
+    <div class="table-responsive pl-4 pr-4 mt-4">
+        <table class="table table-borderless">
+            <thead class="text-primary bg-light">
+            <tr>
+                <th scope="col">Location</th>
+                <th scope="col">Description</th>
+                <th scope="col">Visitors</th>
+                <th scope="col">Avg.Visitors</th>
+                <th scope="col">Repeat Visitors</th>
+                <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr id="row1" class="border-top">
+                <td>Finder St</td>
+                <td>Finder St  Railway Station</td>
+                <td>189545</td>
+                <td>00:33:10</td>
+                <td>54211</td>
+                <td>
+                    <button id="btn1" class="btn btn-primary" onclick="makeCharts();" >
+                        More Details
+                    </button>
+                </td>
+            </tr>
+            <tr id="chartRow1" class="border border-top-0 border-primary d-none fade-in">
+                <td colspan="6">
+                    <!-- This is where the charts should go -->
+                    <!-- demo charts -->
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <table class="table" id="visitorsTb">
+                                                    <thead>
+                                                    <tr>
+                                                        <th>
+                                                            Date
+                                                        </th>
+                                                        <th>
+                                                             Visitors
 
+                                                        </th>
+                                                    </tr>
+                                                    </thead>
+                                                    <tbody id="tableVisitorsBody">
+                                                    <tr>
+                                                        <td>
 
-                <!-- demo charts -->
-                <div class="row mainChart" >
+                                                        </td>
 
-                    <div class="col-4 chart" >
-                        <canvas id="myChart" height="100" width="200"></canvas>
+                                                    </tr>
+                                                    <tr class="table-active">
+                                                        <td>
+                                                            1
+                                                        </td>
+                                                        <td>
+                                                            TB - Monthly
+                                                        </td>
+                                                        <td>
+                                                            01/04/2012
+                                                        </td>
+                                                        <td>
+                                                            Approved
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="table-success">
+                                                        <td>
+                                                            2
+                                                        </td>
+                                                        <td>
+                                                            TB - Monthly
+                                                        </td>
+                                                        <td>
+                                                            02/04/2012
+                                                        </td>
+                                                        <td>
+                                                            Declined
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="table-warning">
+                                                        <td>
+                                                            3
+                                                        </td>
+                                                        <td>
+                                                            TB - Monthly
+                                                        </td>
+                                                        <td>
+                                                            03/04/2012
+                                                        </td>
+                                                        <td>
+                                                            Pending
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="table-danger">
+                                                        <td>
+                                                            4
+                                                        </td>
+                                                        <td>
+                                                            TB - Monthly
+                                                        </td>
+                                                        <td>
+                                                            04/04/2012
+                                                        </td>
+                                                        <td>
+                                                            Call in to confirm
+                                                        </td>
+                                                    </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <canvas id="myChart" height="100" width="200"></canvas>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <table class="table">
+                                                    <thead>
+                                                    <tr>
+                                                        <th>
+                                                            #
+                                                        </th>
+                                                        <th>
+                                                            Product
+                                                        </th>
+                                                        <th>
+                                                            Payment Taken
+                                                        </th>
+                                                        <th>
+                                                            Status
+                                                        </th>
+                                                    </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                    <tr>
+                                                        <td>
+                                                            1
+                                                        </td>
+                                                        <td>
+                                                            TB - Monthly
+                                                        </td>
+                                                        <td>
+                                                            01/04/2012
+                                                        </td>
+                                                        <td>
+                                                            Default
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="table-active">
+                                                        <td>
+                                                            1
+                                                        </td>
+                                                        <td>
+                                                            TB - Monthly
+                                                        </td>
+                                                        <td>
+                                                            01/04/2012
+                                                        </td>
+                                                        <td>
+                                                            Approved
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="table-success">
+                                                        <td>
+                                                            2
+                                                        </td>
+                                                        <td>
+                                                            TB - Monthly
+                                                        </td>
+                                                        <td>
+                                                            02/04/2012
+                                                        </td>
+                                                        <td>
+                                                            Declined
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="table-warning">
+                                                        <td>
+                                                            3
+                                                        </td>
+                                                        <td>
+                                                            TB - Monthly
+                                                        </td>
+                                                        <td>
+                                                            03/04/2012
+                                                        </td>
+                                                        <td>
+                                                            Pending
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="table-danger">
+                                                        <td>
+                                                            4
+                                                        </td>
+                                                        <td>
+                                                            TB - Monthly
+                                                        </td>
+                                                        <td>
+                                                            04/04/2012
+                                                        </td>
+                                                        <td>
+                                                            Call in to confirm
+                                                        </td>
+                                                    </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <canvas id="myChartDailyUsers" height="100" width="200"></canvas>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <table class="table">
+                                                    <thead>
+                                                    <tr>
+                                                        <th>
+                                                            #
+                                                        </th>
+                                                        <th>
+                                                            Product
+                                                        </th>
+                                                        <th>
+                                                            Payment Taken
+                                                        </th>
+                                                        <th>
+                                                            Status
+                                                        </th>
+                                                    </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                    <tr>
+                                                        <td>
+                                                            1
+                                                        </td>
+                                                        <td>
+                                                            TB - Monthly
+                                                        </td>
+                                                        <td>
+                                                            01/04/2012
+                                                        </td>
+                                                        <td>
+                                                            Default
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="table-active">
+                                                        <td>
+                                                            1
+                                                        </td>
+                                                        <td>
+                                                            TB - Monthly
+                                                        </td>
+                                                        <td>
+                                                            01/04/2012
+                                                        </td>
+                                                        <td>
+                                                            Approved
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="table-success">
+                                                        <td>
+                                                            2
+                                                        </td>
+                                                        <td>
+                                                            TB - Monthly
+                                                        </td>
+                                                        <td>
+                                                            02/04/2012
+                                                        </td>
+                                                        <td>
+                                                            Declined
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="table-warning">
+                                                        <td>
+                                                            3
+                                                        </td>
+                                                        <td>
+                                                            TB - Monthly
+                                                        </td>
+                                                        <td>
+                                                            03/04/2012
+                                                        </td>
+                                                        <td>
+                                                            Pending
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="table-danger">
+                                                        <td>
+                                                            4
+                                                        </td>
+                                                        <td>
+                                                            TB - Monthly
+                                                        </td>
+                                                        <td>
+                                                            04/04/2012
+                                                        </td>
+                                                        <td>
+                                                            Call in to confirm
+                                                        </td>
+                                                    </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <canvas id="myChart3" width="200" height="100"></canvas>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <table class="table">
+                                                    <thead>
+                                                    <tr>
+                                                        <th>
+                                                            #
+                                                        </th>
+                                                        <th>
+                                                            Product
+                                                        </th>
+                                                        <th>
+                                                            Payment Taken
+                                                        </th>
+                                                        <th>
+                                                            Status
+                                                        </th>
+                                                    </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                    <tr>
+                                                        <td>
+                                                            1
+                                                        </td>
+                                                        <td>
+                                                            TB - Monthly
+                                                        </td>
+                                                        <td>
+                                                            01/04/2012
+                                                        </td>
+                                                        <td>
+                                                            Default
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="table-active">
+                                                        <td>
+                                                            1
+                                                        </td>
+                                                        <td>
+                                                            TB - Monthly
+                                                        </td>
+                                                        <td>
+                                                            01/04/2012
+                                                        </td>
+                                                        <td>
+                                                            Approved
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="table-success">
+                                                        <td>
+                                                            2
+                                                        </td>
+                                                        <td>
+                                                            TB - Monthly
+                                                        </td>
+                                                        <td>
+                                                            02/04/2012
+                                                        </td>
+                                                        <td>
+                                                            Declined
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="table-warning">
+                                                        <td>
+                                                            3
+                                                        </td>
+                                                        <td>
+                                                            TB - Monthly
+                                                        </td>
+                                                        <td>
+                                                            03/04/2012
+                                                        </td>
+                                                        <td>
+                                                            Pending
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="table-danger">
+                                                        <td>
+                                                            4
+                                                        </td>
+                                                        <td>
+                                                            TB - Monthly
+                                                        </td>
+                                                        <td>
+                                                            04/04/2012
+                                                        </td>
+                                                        <td>
+                                                            Call in to confirm
+                                                        </td>
+                                                    </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <div class="col-md-6">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="col-4 chart">
-                        <canvas id="myChartDailyUsers" height="100" width="200"></canvas>
-                    </div>
-                    <div class="col-4 chart">
-                     <canvas id="myChart3" width="200" height="100"></canvas>
-                    </div>
 
 
-                </div>
-                <!-- demo chart end -->
+
+                    <!-- demo chart end -->
 
 
-            </td>
-        </tr>
-        <tr class="border-top">
-            <td>MAC 2</td>
-            <td>Footscray Library</td>
-            <td>1895</td>
-            <td>02:33:10</td>
-            <td>511</td>
-            <td>
-                <button class="btn btn-primary">
-                    More Details
-                </button>
-            </td>
-        </tr>
-        <tr class="border-top">
-            <td>MAC 3</td>
-            <td>Brisbane City Center</td>
-            <td>3945</td>
-            <td>00:13:10</td>
-            <td>5411</td>
-            <td>
-                <button class="btn btn-primary">
-                    More Details
-                </button>
-            </td>
-        </tr>
-        <tr class="border-top">
-            <td>MAC 4</td>
-            <td>Melbourne Railway Station</td>
-            <td>189545</td>
-            <td>00:33:10</td>
-            <td>54211</td>
-            <td>
-                <button class="btn btn-primary">
-                    More Details
-                </button>
-            </td>
-        </tr>
-        </tbody>
-    </table>
-</div>
+                </td>
+            </tr>
+            <tr class="border-top">
+                <td>MAC 2</td>
+                <td>Footscray Library</td>
+                <td>1895</td>
+                <td>02:33:10</td>
+                <td>511</td>
+                <td>
+                    <button class="btn btn-primary">
+                        More Details
+                    </button>
+                </td>
+            </tr>
+            <tr class="border-top">
+                <td>MAC 3</td>
+                <td>Brisbane City Center</td>
+                <td>3945</td>
+                <td>00:13:10</td>
+                <td>5411</td>
+                <td>
+                    <button class="btn btn-primary">
+                        More Details
+                    </button>
+                </td>
+            </tr>
+            <tr class="border-top">
+                <td>MAC 4</td>
+                <td>Melbourne Railway Station</td>
+                <td>189545</td>
+                <td>00:33:10</td>
+                <td>54211</td>
+                <td>
+                    <button class="btn btn-primary">
+                        More Details
+                    </button>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
 
-<script src="/public/js/jquery-3.5.0.slim.js"type="text/javascript"></script>
+
+
+
+<!--<script src="/public/js/jquery-3.5.0.slim.js"type="text/javascript"></script>-->
 <script src="/public/js/bootstrap.min.js" type="text/javascript"></script>
 <script src="/public/js/main.js" type="text/javascript"></script>
+
+
+
 
 </body>
 

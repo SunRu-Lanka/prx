@@ -8,11 +8,13 @@ import (
 )
 
 func NumberOfUsersr(w http.ResponseWriter,r *http.Request)  {
-	if r.Method !="GET"{
+	if r.Method !="POST"{
 		fmt.Println("error number 1")
 		http.Error(w,http.StatusText(405),http.StatusMethodNotAllowed)
 		return
 	}
+
+	fmt.Println("request value ####",r)
 	totUser,err := TotDailyUser(r)
 	if err!= nil{
 		fmt.Println("error number 2")
