@@ -1,10 +1,245 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>$Title$</title>
-</head>
-<body>
-$END$
-</body>
-</html>
+{{template "head"}}
+{{template "header"}}
+
+<section id="datePicker">
+    <div>
+        <div id="reportrange" style="background: #fff; cursor: pointer; padding: 5px 10px; border: 1px solid #ccc; width: 100%">
+            <i class="fa fa-calendar"></i>&nbsp;
+            <span></span> <i class="fa fa-caret-down"></i>
+        </div>
+    </div>
+
+</section>
+<section id="tableSec">
+    <div id="divTable">
+        <table id="tableMain">
+            <thead>
+            <tr>
+                <th >Location</th>
+                <th >Description</th>
+                <th>Visitors</th>
+                <th >Avg.Visitors</th>
+                <th>Repeat Visitors</th>
+                <th>Details</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr id="rwo1" class="border-top">
+                <td>Finder St</td>
+                <td>Finder St  Railway Station</td>
+                <td>189545</td>
+                <td>00:33:10</td>
+                <td>54211</td>
+                <td>
+                    <button id="btn1" class="btn " onclick="makeCharts();makeCharts2();makeCharts3();" >
+                        More Details
+                    </button>
+                </td>
+            </tr>
+            <tr id="chartRow1" class="border border-top-0 border-primary d-none fade-in">
+                <td colspan="6">
+                    <!-- This is where the charts should go -->
+                    <!-- demo charts -->
+                    <div id="mainChart">
+                        <div class="mainChartSec">
+                            <div class="tableHeading">
+                                <h5> Visitors</h5>
+                            </div>
+                            <div class="chartDetails">
+                                <div class="chartSub">
+                                    <div class="tableData">
+                                        <div>
+                                            <table class="smallTable" id="visitorsTb">
+                                                <thead>
+                                                <tr>
+                                                    <th>Date</th>
+                                                    <th>Visitors</th>
+                                                </tr>
+                                                </thead>
+                                                <tbody id="tableVisitorsBody">
+                                                <tr>
+                                                    <td>
+
+                                                    </td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+
+                                    </div>
+                                    <div class="chartCsv">
+                                        <button class="downloadBtn" onclick=" VisitorsDownload();">Download</button>
+                                    </div>
+                                </div>
+                                <div class="charthead ">
+                                    <canvas id="myChart" height="400 !important" width="800 !important"></canvas>
+
+                                </div>
+                            </div>
+
+
+                        </div>
+                        <div class="mainChartSec">
+                            <div class="tableHeading">
+                                <h5> Avg Visitors</h5>
+                            </div>
+                            <div class="chartDetails">
+                                <div class="chartSub">
+                                    <div class="tableData">
+                                        <div>
+                                            <table class="smallTable" id="DwVisitorsTb">
+                                                <thead>
+                                                <tr>
+                                                    <th>Date</th>
+                                                    <th>Avg.VisitTime</th>
+                                                </tr>
+                                                </thead>
+                                                <tbody id="tableDwVisitorsBody">
+                                                <tr>
+                                                    <td>
+
+                                                    </td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+
+                                    </div>
+                                    <div class="chartCsv">
+                                        <button class="downloadBtn" onclick="DwVisitorsDownload();">Download</button>
+                                    </div>
+                                </div>
+                                <div class="charthead ">
+                                    <canvas id="myChartDailyUsers" height="400 !important" width="800 !important"></canvas>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+                        <div class="mainChartSec">
+                            <div class="tableHeading">
+                                <h5>Repeat Visitors</h5>
+                            </div>
+                            <div class="chartDetails">
+                                <div class="chartSub">
+                                    <div class="tableData">
+                                        <div>
+                                            <table class="smallTable" id="rpVisitorsTb">
+                                                <thead>
+                                                <tr>
+                                                    <th>Date</th>
+                                                    <th>Count</th>
+                                                </tr>
+                                                </thead>
+                                                <tbody id="tableRpVisitorsBody">
+                                                <tr>
+                                                    <td>
+
+                                                    </td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+
+                                    </div>
+                                    <div class="chartCsv">
+                                        <button class="downloadBtn" onclick="RpVisitorsDownload();">Download</button>
+                                    </div>
+                                </div>
+                                <div class="charthead ">
+                                    <canvas id="myChart3" height="400 !important" width="800 !important"></canvas>
+
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </td>
+
+            <tr class="border-top">
+                <td>MAC 2</td>
+                <td>Footscray Library</td>
+                <td>1895</td>
+                <td>02:33:10</td>
+                <td>511</td>
+                <td>
+                    <button class="btn btn-primary">
+                        More Details
+                    </button>
+                </td>
+            </tr>
+            <tr class="border-top">
+                <td>MAC 3</td>
+                <td>Brisbane City Center</td>
+                <td>3945</td>
+                <td>00:13:10</td>
+                <td>5411</td>
+                <td>
+                    <button class="btn btn-primary">
+                        More Details
+                    </button>
+                </td>
+            </tr>
+            <tr class="border-top">
+                <td>MAC 4</td>
+                <td>Melbourne Railway Station</td>
+                <td>189545</td>
+                <td>00:33:10</td>
+                <td>54211</td>
+                <td>
+                    <button class="btn btn-primary">
+                        More Details
+                    </button>
+                </td>
+            </tr>
+
+            </tbody>
+        </table>
+    </div>
+</section>
+
+
+<!--<script src="/public/js/jquery-3.5.0.slim.js"type="text/javascript"></script>-->
+<script src="/public/js/bootstrap.min.js" type="text/javascript"></script>
+<script src="/public/js/main.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+    $(function() {
+
+        var start = moment().subtract(29, 'days');
+
+        var end = moment();
+
+
+        function cb(start, end) {
+            $('#reportrange span').html(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'));
+
+            var datefrom =  start.format('YYYY-MM-DD');
+            var dateTo =  end.format('YYYY-MM-DD');
+            passDates(datefrom,dateTo);
+
+
+        }
+
+        $('#reportrange').daterangepicker({
+            startDate: start,
+            endDate: end,
+            ranges: {
+                'Today': [moment(), moment()],
+                'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
+                'Last 7 Days': [moment().subtract(6, 'days'), moment()],
+                'Last 30 Days': [moment().subtract(29, 'days'), moment()],
+                'This Month': [moment().startOf('month'), moment().endOf('month')],
+                'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
+            }
+        }, cb);
+
+        cb(start, end);
+
+    });
+
+
+</script>
+{{template "footer"}}

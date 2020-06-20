@@ -1,10 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>$Title$</title>
-</head>
-<body>
-$END$
-</body>
-</html>
+{{template "head"}}
+{{template "header"}}
+<form method="POST" action="/authenticate/update/updateprocess">
+
+    <input type="text" name="id" placeholder="id" required value="{{.Id}}" readonly>
+    <input type="email" name="username" placeholder="email" required value="{{.UserName}}" readonly><br>
+    <input type="text" name="password" placeholder="password" required autofocus value="{{.Password}}"><br>
+    <input type="text" name="firstname" placeholder="first name"required value="{{.FirstName}}"><br>
+    <input type="text" name="lastname" placeholder="last name" required value="{{.LastName}}"><br>
+    <label for="sr">Role</label>
+    <select name="role" id="sr" >
+        <option  value="user">user</option>
+        <option value="admin">admin</option>
+
+    </select>
+    <input type="submit"/>
+{{template "footer"}}

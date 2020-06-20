@@ -17,7 +17,7 @@ func DwTView(w http.ResponseWriter,req * http.Request){
 }
 
 func AvgDwTime(w http.ResponseWriter,req * http.Request) {
-	if req.Method != "GET"{
+	if req.Method != "POST"{
 		http.Error(w,http.StatusText(405),http.StatusNotAcceptable)
 		return
 	}

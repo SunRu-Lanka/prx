@@ -1,10 +1,31 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>$Title$</title>
-</head>
-<body>
-$END$
-</body>
-</html>
+{{template "head"}}
+{{template "header"}}
+<section id="tbUserInfo">
+    <div id="userTb">
+        <table id="userInfor">
+            <thead>
+            <tr>
+                <th>Email Address</th>
+                <th>First Name</th>
+                <th>Laset Name</th>
+                <th>Role</th>
+                <th>Update</th>
+                <th>Delete</th>
+            </tr>
+            </thead>
+            {{range .}}
+            <tbody>
+            <tr>
+                <td>{{.UserName}}</td>
+                <td>{{.FirstName}}</td>
+                <td>{{.LastName}}</td>
+                <td>{{.Role}}</td>
+                <td><a href="/authenticate/update?username={{.UserName}}">update</a></td>
+                <td><a href="/authenticate/delete/deleterprocess?username={{.UserName}}">delete</a></td>
+            </tr>
+            {{end}}
+            </tbody>
+        </table>
+    </div>
+</section>
+{{template "footer"}}

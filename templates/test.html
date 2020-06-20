@@ -1,62 +1,69 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-<style>
-    .highlight {
-        background-color: yellow;
-    }
-</style>
+<div id="reportrange" style="background: #fff; cursor: pointer; padding: 5px 10px; border: 1px solid #ccc; width: 100%">
+    <i class="fa fa-calendar"></i>&nbsp;
+    <span></span> <i class="fa fa-caret-down"></i>
+</div>
 
-<form name="TestForm" action="test.php" id="TestForm">
-    First :
-    <input type="text" name="fname" id="fname" value="mike" />
-    <br> Last :
-    <input type="text" name="lname" id="lname" value="smith" />
-    <br> Age : :
-    <input type="number" name="age" id="age" value="50" />
-    <br>
-    <input type="submit">
-</form>
+<script type="text/javascript">
+    $(function() {
 
-<div id="output"></div>
-<div id="status"></div>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<script>
-    $(document).ready(function () {
-        myOutput();
-        $('#output').on('click', '.remo', function () {
-            var c = $(this).hasClass("highlight");
-            c = (c ? 1 : 0);
-            //c = 1 - c;
-            c ^= 1;
-            var vars = {
-                uid: this.getAttribute('data-value'),
-                c: c
-            };
-            $.post('update.php', vars, function (data) {
-                console.log(data);
-                myOutput();
-        })
+        var start = moment().subtract(29, 'days');
+        var end = moment();
 
-        function myOutput() {
-            $.getJSON('data.php', function (data) {
-                $('#output').html('<h1>People List</h1>');
-                $.each(data, function (i, item) {
-                    console.log(item);
-                    var deClass = ' ';
-                    if (item.checked == 1) {
-                        deClass = ' highlight ';
-                    }
-                    $('#output').append('<div class="remo ' + deClass + '" data-value="' + item.id + '" >' + data[i].first + ' ' + data[i].last + '(' + data[i].age + ') </div>');
-                })
-            })
+        function cb(start, end) {
+            $('#reportrange span').html(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'));
         }
-    })
+
+        $('#reportrange').daterangepicker({
+            startDate: start,
+            endDate: end,
+            ranges: {
+                'Today': [moment(), moment()],
+                'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
+                'Last 7 Days': [moment().subtract(6, 'days'), moment()],
+                'Last 30 Days': [moment().subtract(29, 'days'), moment()],
+                'This Month': [moment().startOf('month'), moment().endOf('month')],
+                'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
+            }
+        }, cb);
+
+        cb(start, end);
+
+    });
 </script>
 
-</body>
-</html>
+<div >
+    <label><span>From</span></label>
+    <input type="date" class="form-control" id="fromDate">
+</div>
+<div>
+    <label><span>To</span></label>
+    <input type="date" class="form-control" id="toDate">
+</div>
+
+<!-- Date ranger doc---->
+<div class="col-md-4 text-center pl-0 pr-0">
+
+    <ul class="list-inline">
+        <li class="list-inline-item">
+            <span class="text-info text-uppercase small font-weight-bold" id="showDateRange"></span>
+        </li>
+        <li class="list-inline-item">
+            <div id="customer_reportrange" style="background: #fff; cursor: pointer; padding: 5px 10px; border: 1px solid #ccc; width:60px">
+                <i class="fa fa-calendar"></i>&nbsp;
+                <span></span> <i class="fa fa-caret-down fa-lg"></i>
+            </div>
+        </li>
+        <li class="list-inline-item"><input class="form-control xsm-2 w-100" id="Search_Customer" type="search" placeholder="Search" style="border-radius:0"></li>
+
+    </ul>
+
+</div>
+<li class="list-inline-item">
+    <span class="text-info text-uppercase small font-weight-bold" id="showDateRange"></span>
+</li>
+<li class="list-inline-item">
+    <div id="customer_reportrange" style="background: #fff; cursor: pointer; padding: 5px 10px; border: 1px solid #ccc; width:60px">
+        <i class="fa fa-calendar"></i>&nbsp;
+        <span></span> <i class="fa fa-caret-down fa-lg"></i>
+    </div>
+</li>

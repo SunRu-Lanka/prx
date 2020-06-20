@@ -1,10 +1,53 @@
+{{define "head"}}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <title>Proximity Analysis</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+    <link rel="stylesheet" type="text/css" media="screen" href="/public/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="/public/css/Chart.min.css">
+    <link rel="stylesheet" type='text/css' media="screen" href="/public/css/main.css">
+    <link rel="stylesheet" href="/public/css/mq-800-plus.css" media="(min-width: 950px)">
+    <link rel="stylesheet" href="/public/css/reset-css.css ">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- date time picker  calling url--->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+
 </head>
 <body>
-$END$
+{{end}}
+{{define "header"}}
+    <header>
+        <div id="logo">
+            <img src="/public/img/logo.jpg">
+        </div>
+        <div id="topic">
+
+            <h2>PROXIMITY ANALYSIS</h2>
+
+        </div>
+        <div>
+            <ul>
+                <li><a href="/signup">Create User</a> </li>
+                <li><a href="/userinfo">All Users</a> </li>
+                <li><a href="/usersDetail">Users Details</a></li>
+
+            </ul>
+        </div>
+        <div id="btnLogout">
+            <button id="logout" onclick="location.href ='/logout'">Logout</button>
+
+        </div>
+    </header>
+{{end}}
+{{define "footer"}}
 </body>
 </html>
+{{end}}

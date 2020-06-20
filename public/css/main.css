@@ -1,3 +1,4 @@
+/*
 .chart{
     background-color: #D5E5F2;
     border: 2px solid #A7C6D9;
@@ -11,4 +12,289 @@
 }
 .mainChart{
     padding:0 15px 0 15px;
+}*/
+body{
+    background-color: #fefefe;
 }
+header{
+    width: 100%;
+    height: 8vh;
+    display: flex;
+    flex-direction: row;
+    border-bottom: 3px solid #81c31f;
+    background-color: #fefefe;
+}
+header>div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+header img{
+    width: auto;
+    height: 5vh;
+    padding-left:1px;
+}
+
+#logo{
+    width: 26%;
+    height: 7vh;
+
+}
+#topic{
+    width: 55%;
+    height: 7vh;
+}
+#topic h2{
+    padding-top: 3vh;
+    font-size: 1em;
+    font-weight:bold;
+    color:#81c31f ;
+}
+#btnLogout{
+    width: 19%;
+    height: 7vh;
+
+}
+#logout{
+    width: 5rem;
+    height: 2.5rem;
+    color: #131313;
+    background-color:#81c31f ;
+    border: 1px solid #81c31f;
+    padding-top: 1vh;
+    margin-right: 0;
+    text-align: center;
+}
+#logout:hover{
+    color:#81c31f;
+    background-color:#131313 ;
+    border: 1px solid #131313;
+}
+#datePicker{
+    width: 100%;
+    height: 6vh;
+    margin-top: 5vh;
+    background-color: #1b1e21;
+    display: flex;
+    align-content: center;
+
+}
+#datePicker>div{
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    right: 10px;
+}
+#datePicker>div>div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+#datePicker input{
+    width: 11rem;
+    height: 4vh;
+
+    font-size:.6em ;
+}
+#datePicker label{
+    width: 4rem;
+    height: 4vh;
+
+    color:#81c31f;
+    text-align: center;
+    font-size:.6em ;
+
+}
+#tableSec{
+    width: 100%;
+    height: 78vh;
+     display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5vh;
+
+
+}
+#tableSec>div{
+     width: 99%;
+    height: 76vh;
+    overflow: auto;
+
+}
+#tableSec>div>table{
+    width: 100%;
+    height: auto;
+}
+#tableMain>thead{
+    width: 100%;
+    height: 6vh;
+    background-color: #131313;
+    color:#81c31f;
+    font-size: 0.6em;
+    font-weight: 700;
+
+}
+#tableMain>thead>tr{
+    height: 6vh;
+    width: 100%;
+}
+#tableMain>thead>tr>th{
+    width: 16.6666%;
+    height: 6vh;
+    background-color: #131313;
+    text-align: center;
+    border-right: 2px solid #ffffff;
+}
+#tableMain>tbody td{
+    border-right: 2px solid #ffffff;
+    height: 3vh;
+    text-align: center;
+    color: #292929;
+    font-size: 0.6em;
+}
+#tableMain>tbody tr:nth-child(odd){
+
+    background-color: #969696;
+}
+#tableMain>tbody tr:nth-child(even){
+    background-color: #d5d5d5;
+
+}
+
+.btn{
+    background-color: #81c31f;
+    font-size: 0.6em;
+    border: 2px solid #81c31f;
+    color:#131313 ;
+}
+.btn:hover{
+    background-color: #131313;
+    color: #81c31f;
+    border: 2px solid #131313;
+}
+#mainChart{
+    width:100%;
+    height:auto;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+}
+.border-primary {
+    border-color: #0b2e13!important;
+}
+.mainChartSec{
+    width: 100%;
+    height: 64vh;
+    display: flex;
+    flex-direction: column;
+    margin: 5vh 0;
+
+
+}
+.tableHeading{
+    width: 100%;
+    height: 4vh;
+    color: #0b2e13;
+
+
+}
+.chartDetails{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+}
+.chartSub{
+    width:100%;
+    height:60vh;
+    display: flex;
+    flex-direction: column;
+
+}
+.charthead{
+    width: 100%;
+    height:60vh;
+    background-color: #e8f1f9;
+    border: 2px solid #0b2e13;
+    border-radius: 10px;
+}
+
+
+.tableData{
+    overflow:auto;
+    width: 100%;
+    height: 55vh;
+    display: flex;
+    align-items: center;
+
+    justify-content: center;
+}
+.tableData>div{
+    width: 90%;
+    height: 50vh;
+    overflow: auto;
+
+}
+.smallTable{
+    width: 100%;
+    margin: 0;
+
+}
+.smallTable>thead{
+    width: 100%;
+    height: 5vh;
+    background-color: #131313;
+    color:#81c31f;
+    font-weight: 700;
+}
+.smallTable>thead tr{
+
+    width: 100%;
+}
+
+.smallTable>thead>tr>th{
+    background-color: #131313;
+    text-align: center;
+    border-right:2px solid #ffffff;
+    font-size: .6em;
+    height: 5vh;
+    width: 50%;
+}
+.smallTable tbody{
+
+    height: 45vh;
+    width: 100%;
+}
+.smallTable>tbody>tr>td{
+    font-size: 0.5em;
+    font-weight: 600;
+    color: #292929;
+    width: 50%;
+    height: 4vh;
+}
+
+.chartCsv{
+    width: 100%;
+    height: 5vh;
+    position: relative;
+    right: 20px;
+
+
+}
+.downloadBtn{
+    width:6rem;
+    height: 2.5rem;
+    background-color: #0b2e13;
+    color: #ffffff;
+    font-size: 1em;
+    border: 2px solid #0b2e13;
+    border-radius: 10px;
+
+
+}
+#btnLogout1{
+    display: none;
+}
+
+
+

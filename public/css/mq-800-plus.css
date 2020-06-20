@@ -1,0 +1,69 @@
+#topic h2{
+    font-size: 2em;
+
+}
+#logo{
+    width: 9%;
+
+}
+#topic{
+    width: 84%;
+}
+#btnLogout{
+   width: 7%;
+}
+#topic h2{
+    padding-top: 0;
+}
+#datePicker input{
+    font-size: 1em;
+}
+#datePicker label{
+    font-size: 1em;
+    font-width: 700;
+}
+#tableSec>div{
+    width: 80%;
+}
+#tableMain>thead{
+    font-size: 1em;
+}
+.smallTable>thead>tr>th{
+    font-size: 1em;
+}
+#tableMain>tbody>tr>td{
+    font-size: 0.8em;
+    font-weight: 600;
+
+}
+.btn{
+    font-size: 0.9em;
+    font-weight: 600;
+}
+/*main chart*/
+
+.mainChartSec{
+
+    align-content: center;
+    justify-content: center;
+}
+.chartDetails{
+    flex-direction: row;
+}
+
+.chartSub{
+    width: 35%;
+
+}
+.charthead{
+    width: 65%;
+}
+
+.smallTable>thead>tr>th{
+    font-size: 1em;
+
+}
+.smallTable>tbody>tr>td{
+    font-size: 1em;
+
+}
