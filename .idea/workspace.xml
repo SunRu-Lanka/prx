@@ -1,0 +1,396 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="2cddedb9-5b31-457a-9909-3328c182f685" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../binotrackweb/.idea/binotrackweb.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../binotrackweb/public/css/font-awesome.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../binotrackweb/public/css/skel.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../binotrackweb/public/css/style-large.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../binotrackweb/public/css/style-medium.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../binotrackweb/public/css/style-small.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../binotrackweb/public/css/style-xlarge.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../binotrackweb/public/css/style-xsmall.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../binotrackweb/public/css/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../binotrackweb/public/fonts/FontAwesome.otf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../binotrackweb/public/fonts/fontawesome-webfont.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../binotrackweb/public/fonts/fontawesome-webfont.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../binotrackweb/public/fonts/fontawesome-webfont.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../binotrackweb/public/fonts/fontawesome-webfont.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../binotrackweb/public/img/banner.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../binotrackweb/public/img/pic01.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../binotrackweb/public/img/pic02.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../binotrackweb/public/img/pic03.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../binotrackweb/public/js/html5shiv.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../binotrackweb/public/js/init.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../binotrackweb/public/js/jquery.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../binotrackweb/public/js/skel-layers.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../binotrackweb/public/js/skel.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../binotrackweb/templates/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../binotrackweb/templates/left-sidebar.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../binotrackweb/templates/no-sidebar.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../binotrackweb/templates/right-sidebar.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../binotrackwebso/.idea/binotrackwebso.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../binotrackwebso/main.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../binotrackwebso/public/css/Ipro.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../binotrackwebso/public/css/main.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../binotrackwebso/public/css/mq-800-plus.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../binotrackwebso/public/css/reset-css.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../binotrackwebso/public/img/Melbourne-1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../binotrackwebso/public/img/Melbourne-1.psd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../binotrackwebso/public/img/aboutUs.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../binotrackwebso/public/img/aboutUs1.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../binotrackwebso/public/img/adobe3.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../binotrackwebso/public/img/adobe4.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../binotrackwebso/public/img/asset_89672305_Preview.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../binotrackwebso/public/img/binitrackReport.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../binotrackwebso/public/img/binotrack.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../binotrackwebso/public/img/fleetoptimisation.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../binotrackwebso/public/img/imagemel.mov" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../binotrackwebso/public/img/increseb.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../binotrackwebso/public/img/line-chart.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../binotrackwebso/public/img/livetrack.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../binotrackwebso/public/img/logo.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../binotrackwebso/public/img/logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../binotrackwebso/public/img/mainIage.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../binotrackwebso/public/img/middleimagecenter.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../binotrackwebso/public/img/offlinetrack.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../binotrackwebso/public/img/personaltracking.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../binotrackwebso/public/img/product.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../binotrackwebso/public/img/report.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../binotrackwebso/public/img/slide3.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../binotrackwebso/public/img/test1.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../binotrackwebso/public/img/vehicletracking.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../binotrackwebso/public/img/welcome2.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../binotrackwebso/public/img/welcome21.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../binotrackwebso/public/img/wellcome.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../binotrackwebso/public/js/menu.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../binotrackwebso/template/about.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../binotrackwebso/template/benefits.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../binotrackwebso/template/contactus.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../binotrackwebso/template/customerlogin.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../binotrackwebso/template/demo.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../binotrackwebso/template/include-slider.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../binotrackwebso/template/include.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../binotrackwebso/template/includes-hdr-ftr.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../binotrackwebso/template/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../binotrackwebso/template/industries.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../binotrackwebso/template/products.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../binotrackwebso/template/solution.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../binotrackwebso/template/tracker.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../chartjst/.idea/chartjst.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../golang-web-dev-master/045-code-organization/03_multiple-packages/templates/chart.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../googleAnalatics/.idea/googleAnalatics.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../googleAnalatics1/.idea/googleAnalatics1.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../googleAnalytis2/.idea/googleAnalytis2.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/prx.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../snippetbox16.6/.idea/snippetbox16.6.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../snippetbox5.1/.idea/snippetbox5.1.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../snippetbox5.2/.idea/snippetbox5.2.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../snippetbox5.3/.idea/snippetbox5.3.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../snippetbox5.4/.idea/snippetbox5.4.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../snippetbox6.2/.idea/snippetbox6.2.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../snippetbox6.3/.idea/snippetbox6.3.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../sunruweb/config/tpl.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../sunruweb/main.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../sunruweb/public/css/main.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../sunruweb/public/css/mq-800-plus.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../sunruweb/public/css/reset-css.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../sunruweb/public/img/Grey Logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../sunruweb/public/img/Red Logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../sunruweb/public/js/main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../sunruweb/template/include-hd-ft.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../sunruweb/template/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../binotrack/cmd/handlers.go" beforeDir="false" afterPath="$PROJECT_DIR$/../binotrack/cmd/handlers.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../binotrack/cmd/helpers.go" beforeDir="false" afterPath="$PROJECT_DIR$/../binotrack/cmd/helpers.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../binotrack/cmd/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/../binotrack/cmd/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../binotrack/cmd/routers.go" beforeDir="false" afterPath="$PROJECT_DIR$/../binotrack/cmd/routers.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../binotrack/cmd/templates.go" beforeDir="false" afterPath="$PROJECT_DIR$/../binotrack/cmd/templates.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../binotrack/main.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../binotrack/pkg/models/models.go" beforeDir="false" afterPath="$PROJECT_DIR$/../binotrack/pkg/models/models.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../binotrack/pkg/models/msSql/vehicles.go" beforeDir="false" afterPath="$PROJECT_DIR$/../binotrack/pkg/models/msSql/vehicles.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../binotrack/ui/html/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/../binotrack/ui/html/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chartjst/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/../chartjst/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../forecast/config/tpl.go" beforeDir="false" afterPath="$PROJECT_DIR$/../forecast/config/tpl.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../forecast/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/../forecast/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../forecast/public/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/../forecast/public/css/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../forecast/public/css/mq-900-plus.css" beforeDir="false" afterPath="$PROJECT_DIR$/../forecast/public/css/mq-900-plus.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../forecast/public/css/reset-css.css" beforeDir="false" afterPath="$PROJECT_DIR$/../forecast/public/css/reset-css.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../forecast/public/js/menu.js" beforeDir="false" afterPath="$PROJECT_DIR$/../forecast/public/js/menu.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../forecast/templates/include-hdr-ftr-1.html" beforeDir="false" afterPath="$PROJECT_DIR$/../forecast/templates/include-hdr-ftr-1.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../forecast/templates/include-hdr-ftr.html" beforeDir="false" afterPath="$PROJECT_DIR$/../forecast/templates/include-hdr-ftr.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../forecast/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../forecast/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../forecast/templates/itmeDetails.html" beforeDir="false" afterPath="$PROJECT_DIR$/../forecast/templates/itmeDetails.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../googleAnalatics/handlers/auth_google.go" beforeDir="false" afterPath="$PROJECT_DIR$/../googleAnalatics/handlers/auth_google.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../googleAnalatics/handlers/base.go" beforeDir="false" afterPath="$PROJECT_DIR$/../googleAnalatics/handlers/base.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../googleAnalatics/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/../googleAnalatics/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../googleAnalatics/template/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../googleAnalatics/template/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../googleAnalatics1/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/../googleAnalatics1/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../googleAnalytis2/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/../googleAnalytis2/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../notification4G/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/../notification4G/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../onePrx/.idea/onePrx.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../onePrx/main.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../onePrxTextFileRead/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/../onePrxTextFileRead/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/dbCon.go" beforeDir="false" afterPath="$PROJECT_DIR$/config/dbCon.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/tpl.go" beforeDir="false" afterPath="$PROJECT_DIR$/config/tpl.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dailyUsers/dailyUserHandler.go" beforeDir="false" afterPath="$PROJECT_DIR$/dailyUsers/dailyUserHandler.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dailyUsers/dailyUserModel.go" beforeDir="false" afterPath="$PROJECT_DIR$/dailyUsers/dailyUserModel.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dwellTime/dwHandler.go" beforeDir="false" afterPath="$PROJECT_DIR$/dwellTime/dwHandler.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dwellTime/dwModel.go" beforeDir="false" afterPath="$PROJECT_DIR$/dwellTime/dwModel.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/Chart.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/bootstrap-grid.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/bootstrap-grid.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/bootstrap-reboot.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/bootstrap-reboot.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/bootstrap.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/bootstrap.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/repeitUsers/rpHandler.go" beforeDir="false" afterPath="$PROJECT_DIR$/repeitUsers/rpHandler.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/repeitUsers/rpModel.go" beforeDir="false" afterPath="$PROJECT_DIR$/repeitUsers/rpModel.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/avgDwellTime.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/avgDwellTime.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/dailyUserTot.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/dailyUserTot.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/rpUsersS.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/rpUsersS.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sendAlerts/sendUsage.go" beforeDir="false" afterPath="$PROJECT_DIR$/../sendAlerts/sendUsage.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../snippetbox-16/.idea/snippetbox-16.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../snippetbox4.3/pkg/models/mysql/snippets.go" beforeDir="false" afterPath="$PROJECT_DIR$/../snippetbox4.3/pkg/models/mysql/snippets.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../suntrack/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../suntrack/.idea/modules.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+        <option value="JavaScript File" />
+        <option value="Go File" />
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="GOROOT" path="C:\Go" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IgnoredFileRootStore">
+    <option name="generatedRoots">
+      <set>
+        <option value="C:\Users\sudes\gocode\src\github.com\sudesh35139\prx\.idea" />
+      </set>
+    </option>
+  </component>
+  <component name="ProjectId" id="1bD8YYvJEdf8zFQVIRZyiWp8Cse" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultGoTemplateProperty" value="Go File" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="configurable.Global.GOPATH.is.expanded" value="true" />
+    <property name="configurable.Project.GOPATH.is.expanded" value="true" />
+    <property name="go.import.settings.migrated" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\sudes\gocode\src\github.com\sudesh35139\prx\public\css" />
+      <recent name="C:\Users\sudes\gocode\src\github.com\sudesh35139\prx\public\img" />
+      <recent name="C:\Users\sudes\gocode\src\github.com\sudesh35139\prx\public\js" />
+      <recent name="C:\Users\sudes\gocode\src\github.com\sudesh35139\prx" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Go Build.go build github.com/sudesh35139/prx">
+    <configuration name="go build github.com/sudesh35139/prx" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="prx" />
+      <working_directory value="$PROJECT_DIR$/" />
+      <kind value="PACKAGE" />
+      <package value="github.com/sudesh35139/prx" />
+      <method v="2" />
+    </configuration>
+    <configuration name="go build github.com/sudesh35139/prx/authenticatPac" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="prx" />
+      <working_directory value="$PROJECT_DIR$/" />
+      <kind value="PACKAGE" />
+      <package value="github.com/sudesh35139/prx/authenticatPac" />
+      <directory value="$PROJECT_DIR$/" />
+      <method v="2" />
+    </configuration>
+    <configuration name="go build github.com/sudesh35139/prx/config" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="prx" />
+      <working_directory value="$PROJECT_DIR$/" />
+      <kind value="PACKAGE" />
+      <package value="github.com/sudesh35139/prx/config" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Go Build.go build github.com/sudesh35139/prx" />
+        <item itemvalue="Go Build.go build github.com/sudesh35139/prx/authenticatPac" />
+        <item itemvalue="Go Build.go build github.com/sudesh35139/prx/config" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="275" y="22" key="#Inspections" timestamp="1588819130619">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="275" y="22" key="#Inspections/0.0.1366.728@0.0.1366.728" timestamp="1588819130619" />
+    <state x="-1194" y="342" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1591877565451">
+      <screen x="-1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="-1194" y="342" key="#com.intellij.fileTypes.FileTypeChooser/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1591877565451" />
+    <state x="570" y="251" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1588495737189">
+      <screen x="0" y="0" width="1680" height="1010" />
+    </state>
+    <state x="570" y="251" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1680.1010/1680.0.1680.1050@0.0.1680.1010" timestamp="1588495737189" />
+    <state x="-1212" y="277" key="FileChooserDialogImpl" timestamp="1592531954428">
+      <screen x="-1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="-1212" y="267" key="FileChooserDialogImpl/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1592228256999" />
+    <state x="709" y="267" key="FileChooserDialogImpl/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1591792170161" />
+    <state x="504" y="187" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1591868802885" />
+    <state x="620" y="259" key="FileChooserDialogImpl/0.0.1680.1010/1680.0.1680.1050@0.0.1680.1010" timestamp="1591162322888" />
+    <state x="2300" y="269" key="FileChooserDialogImpl/0.0.1680.1010/1680.0.1680.1050@1680.0.1680.1050" timestamp="1588373288617" />
+    <state x="-1212" y="277" key="FileChooserDialogImpl/0.0.1920.1040/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1592531954428" />
+    <state x="709" y="267" key="FileChooserDialogImpl/0.0.1920.1040/-1920.0.1920.1080@0.0.1920.1040" timestamp="1591701211823" />
+    <state x="709" y="267" key="FileChooserDialogImpl/0.0.1920.1040/1920.26.1680.1050@0.0.1920.1040" timestamp="1591270800239" />
+    <state x="2540" y="296" key="FileChooserDialogImpl/0.0.1920.1040/1920.26.1680.1050@1920.26.1680.1050" timestamp="1591272143644" />
+    <state width="1877" height="189" key="GridCell.Tab.0.bottom" timestamp="1592577608832">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1397" height="269" key="GridCell.Tab.0.bottom/-1440.0.1440.860/0.0.1366.728@-1440.0.1440.860" timestamp="1589610381245" />
+    <state width="1397" height="269" key="GridCell.Tab.0.bottom/-1440.0.1440.860/0.0.1366.728@0.0.1366.728" timestamp="1589667447625" />
+    <state width="1877" height="142" key="GridCell.Tab.0.bottom/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1592351797827" />
+    <state width="1877" height="189" key="GridCell.Tab.0.bottom/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1592577608832" />
+    <state width="1323" height="162" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1592466910252" />
+    <state width="1637" height="187" key="GridCell.Tab.0.bottom/0.0.1680.1010/1680.0.1680.1050@0.0.1680.1010" timestamp="1591017524021" />
+    <state width="1637" height="187" key="GridCell.Tab.0.bottom/0.0.1680.1010/1680.0.1680.1050@1680.0.1680.1050" timestamp="1591009397461" />
+    <state width="1877" height="199" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1592489544462" />
+    <state width="1877" height="161" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.0.1920.1080@0.0.1920.1040" timestamp="1592143814756" />
+    <state width="1877" height="293" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.26.1680.1050@0.0.1920.1040" timestamp="1591173928890" />
+    <state width="1877" height="189" key="GridCell.Tab.0.center" timestamp="1592577608832">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1397" height="269" key="GridCell.Tab.0.center/-1440.0.1440.860/0.0.1366.728@-1440.0.1440.860" timestamp="1589610381244" />
+    <state width="1397" height="269" key="GridCell.Tab.0.center/-1440.0.1440.860/0.0.1366.728@0.0.1366.728" timestamp="1589667447624" />
+    <state width="1877" height="142" key="GridCell.Tab.0.center/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1592351797826" />
+    <state width="1877" height="189" key="GridCell.Tab.0.center/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1592577608832" />
+    <state width="1323" height="162" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1592466910251" />
+    <state width="1637" height="187" key="GridCell.Tab.0.center/0.0.1680.1010/1680.0.1680.1050@0.0.1680.1010" timestamp="1591017524021" />
+    <state width="1637" height="187" key="GridCell.Tab.0.center/0.0.1680.1010/1680.0.1680.1050@1680.0.1680.1050" timestamp="1591009397460" />
+    <state width="1877" height="199" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1592489544461" />
+    <state width="1877" height="161" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.0.1920.1080@0.0.1920.1040" timestamp="1592143814756" />
+    <state width="1877" height="293" key="GridCell.Tab.0.center/0.0.1920.1040/1920.26.1680.1050@0.0.1920.1040" timestamp="1591173928889" />
+    <state width="1877" height="189" key="GridCell.Tab.0.left" timestamp="1592577608831">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1397" height="269" key="GridCell.Tab.0.left/-1440.0.1440.860/0.0.1366.728@-1440.0.1440.860" timestamp="1589610381244" />
+    <state width="1397" height="269" key="GridCell.Tab.0.left/-1440.0.1440.860/0.0.1366.728@0.0.1366.728" timestamp="1589667447624" />
+    <state width="1877" height="142" key="GridCell.Tab.0.left/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1592351797826" />
+    <state width="1877" height="189" key="GridCell.Tab.0.left/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1592577608831" />
+    <state width="1323" height="162" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1592466910249" />
+    <state width="1637" height="187" key="GridCell.Tab.0.left/0.0.1680.1010/1680.0.1680.1050@0.0.1680.1010" timestamp="1591017524021" />
+    <state width="1637" height="187" key="GridCell.Tab.0.left/0.0.1680.1010/1680.0.1680.1050@1680.0.1680.1050" timestamp="1591009397460" />
+    <state width="1877" height="199" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1592489544461" />
+    <state width="1877" height="161" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.0.1920.1080@0.0.1920.1040" timestamp="1592143814756" />
+    <state width="1877" height="293" key="GridCell.Tab.0.left/0.0.1920.1040/1920.26.1680.1050@0.0.1920.1040" timestamp="1591173928889" />
+    <state width="1877" height="189" key="GridCell.Tab.0.right" timestamp="1592577608832">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1397" height="269" key="GridCell.Tab.0.right/-1440.0.1440.860/0.0.1366.728@-1440.0.1440.860" timestamp="1589610381244" />
+    <state width="1397" height="269" key="GridCell.Tab.0.right/-1440.0.1440.860/0.0.1366.728@0.0.1366.728" timestamp="1589667447624" />
+    <state width="1877" height="142" key="GridCell.Tab.0.right/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1592351797827" />
+    <state width="1877" height="189" key="GridCell.Tab.0.right/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1592577608832" />
+    <state width="1323" height="162" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1592466910251" />
+    <state width="1637" height="187" key="GridCell.Tab.0.right/0.0.1680.1010/1680.0.1680.1050@0.0.1680.1010" timestamp="1591017524021" />
+    <state width="1637" height="187" key="GridCell.Tab.0.right/0.0.1680.1010/1680.0.1680.1050@1680.0.1680.1050" timestamp="1591009397460" />
+    <state width="1877" height="199" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1592489544462" />
+    <state width="1877" height="161" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1920.1080@0.0.1920.1040" timestamp="1592143814756" />
+    <state width="1877" height="293" key="GridCell.Tab.0.right/0.0.1920.1040/1920.26.1680.1050@0.0.1920.1040" timestamp="1591173928890" />
+    <state x="341" y="161" key="SettingsEditor" timestamp="1589350060974">
+      <screen x="0" y="0" width="1680" height="1010" />
+    </state>
+    <state x="341" y="161" key="SettingsEditor/0.0.1680.1010/1680.0.1680.1050@0.0.1680.1010" timestamp="1589350060974" />
+    <state x="2021" y="167" key="SettingsEditor/0.0.1680.1010/1680.0.1680.1050@1680.0.1680.1050" timestamp="1589334871364" />
+    <state x="1710" y="0" width="1692" height="1057" maximized="true" key="dock-window-1" timestamp="1591173742579">
+      <screen x="1920" y="26" width="1680" height="1050" />
+    </state>
+    <state x="-8" y="-8" width="1382" height="784" key="dock-window-1/-1440.0.1440.860/0.0.1366.728@-1440.0.1440.860" timestamp="1589695631438" />
+    <state x="1838" y="245" width="1378" height="773" maximized="true" key="dock-window-1/-1440.0.1440.860/0.0.1366.728@0.0.1366.728" timestamp="1589674983711" />
+    <state x="1710" y="0" width="1692" height="1057" key="dock-window-1/0.0.1366.728@0.0.1366.728" timestamp="1591060240106" />
+    <state x="1710" y="0" width="1692" height="1057" maximized="true" key="dock-window-1/0.0.1680.1010/1680.0.1680.1050@0.0.1680.1010" timestamp="1591151721379" />
+    <state x="1838" y="245" width="1378" height="773" key="dock-window-1/0.0.1680.1010/1680.0.1680.1050@1680.0.1680.1050" timestamp="1589672955316" />
+    <state x="1673" y="55" width="1366" height="728" maximized="true" key="dock-window-2" timestamp="1590363530739">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="-7" y="0" width="1380" height="735" key="dock-window-2/-1440.0.1440.860/0.0.1366.728@0.0.1366.728" timestamp="1589667330981" />
+    <state x="1673" y="55" width="1366" height="728" maximized="true" key="dock-window-2/0.0.1366.728@0.0.1366.728" timestamp="1590363530739" />
+    <state x="1673" y="55" width="1366" height="728" maximized="true" key="dock-window-2/0.0.1680.1010/1680.0.1680.1050@0.0.1680.1010" timestamp="1590295406815" />
+    <state x="1912" y="44" width="1382" height="744" key="dock-window-2/0.0.1680.1010/1680.0.1680.1050@1680.0.1680.1050" timestamp="1589667253938" />
+    <state x="1825" y="194" width="1379" height="701" maximized="true" key="dock-window-3" timestamp="1589686528094">
+      <screen x="1680" y="0" width="1680" height="1050" />
+    </state>
+    <state x="1825" y="194" width="1379" height="701" maximized="true" key="dock-window-3/0.0.1680.1010/1680.0.1680.1050@0.0.1680.1010" timestamp="1589686528094" />
+    <state x="1680" y="54" width="1456" height="701" maximized="true" key="dock-window-3/0.0.1680.1010/1680.0.1680.1050@1680.0.1680.1050" timestamp="1589667766131" />
+    <state x="1790" y="0" width="1456" height="701" maximized="true" key="dock-window-4" timestamp="1589696761542">
+      <screen x="1680" y="0" width="1680" height="1050" />
+    </state>
+    <state x="1790" y="0" width="1456" height="701" maximized="true" key="dock-window-4/0.0.1680.1010/1680.0.1680.1050@0.0.1680.1010" timestamp="1589696761542" />
+    <state x="1881" y="64" width="1456" height="701" maximized="true" key="dock-window-5" timestamp="1589702989115">
+      <screen x="1680" y="0" width="1680" height="1050" />
+    </state>
+    <state x="1881" y="64" width="1456" height="701" maximized="true" key="dock-window-5/0.0.1680.1010/1680.0.1680.1050@0.0.1680.1010" timestamp="1589702989115" />
+    <state x="2173" y="119" width="1130" height="680" maximized="true" key="dock-window-6" timestamp="1588503352889">
+      <screen x="1680" y="0" width="1680" height="1050" />
+    </state>
+    <state x="2173" y="119" width="1130" height="680" maximized="true" key="dock-window-6/0.0.1680.1010/1680.0.1680.1050@0.0.1680.1010" timestamp="1588503352889" />
+    <state x="342" y="0" width="919" height="472" key="dock-window-7" timestamp="1588554402826">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="342" y="0" width="919" height="472" key="dock-window-7/0.0.1366.728@0.0.1366.728" timestamp="1588554402826" />
+    <state x="2100" y="0" width="1130" height="680" key="dock-window-7/0.0.1680.1010/1680.0.1680.1050@0.0.1680.1010" timestamp="1588504353219" />
+  </component>
+</project>
