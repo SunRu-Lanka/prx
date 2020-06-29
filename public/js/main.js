@@ -435,4 +435,30 @@ $(document).ready(function () {
 */
 
 
-//test
+//login page check
+//var formUse =document.querySelector('#form-user-login')
+var  loginsubmit =document.querySelector('#loginsubmit')
+var loginError = document.querySelector('#login-error')
+
+function checkLoginStatus(){
+    var xhr = new XMLHttpRequest();
+    xhr.open(('post','/login',true))
+    xhr.addEventListener('readystatechange',function () {
+        if(xhr.readyState == XMLHttpRequest.DONE && xhr.status == 200){
+            var item = xhr.responseText;
+            console.log(item);
+            if (item == 'true'){
+                loginError.textContent='invalid usename or password'
+            }else {
+                loginError.textContent = '';
+
+            }
+            
+        }
+
+
+    });
+    xhr.send(loginsubmit)
+
+}
+

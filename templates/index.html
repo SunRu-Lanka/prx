@@ -13,16 +13,17 @@
 <section id="loginSEc">
     <article id="logingArt">
         <div>
-            <form method="POST" action="/login">
-                <input type="text" name="username" placeholder="email"><br>
-                <input type="password" name="password" placeholder="password"><br>
-                <input type="submit">
+            <form method="POST" action="/login" id="form-user-login">
+                <input type="text" name="username" placeholder="email" class="logintext"><br><br>
+                <input type="password" name="password" placeholder="password" class="logintext"><br><br>
+                <input type="submit" value="Login" id="loginsubmit" onclick="checkLoginStatus()">
+                <p class="form-field-err" id="login-error"></p>
             </form>
 
         </div>
     </article>
 </section>
-<h3>User login  </h3>
+
 
 
 {{template "footer"}}

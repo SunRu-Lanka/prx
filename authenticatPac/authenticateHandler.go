@@ -26,10 +26,10 @@ func Signup(w http.ResponseWriter,req *http.Request){
 }
 func SignupProcess(w http.ResponseWriter,req *http.Request){
 	u := GetUser(w,req)
-	//if !AlreadyLoggedIn(w, req) {
-	//	http.Redirect(w, req, "/", http.StatusSeeOther)
-	//	return
-	//}
+	if !AlreadyLoggedIn(w, req) {
+		http.Redirect(w, req, "/", http.StatusSeeOther)
+		return
+	}
 	if u.Role != "admin"{
 		http.Error(w,"You are not in appropriate account",http.StatusForbidden)
 		return
@@ -54,7 +54,7 @@ func SignupProcess(w http.ResponseWriter,req *http.Request){
 
 
 	}
-	http.Redirect(w,req,"/alreadytaken",http.StatusSeeOther)
+	//http.Redirect(w,req,"/alreadytaken",http.StatusSeeOther)
 	//config.TPL.ExecuteTemplate(w,"alreadytaken.html",user)
 
 }
@@ -79,14 +79,17 @@ func Login(w http.ResponseWriter,req *http.Request){
 	if req.Method == http.MethodPost{
 		u,err := LoginProess(req)
 
+
 		if err == sql.ErrNoRows{
 			http.Error(w,"username or password do not  match",http.StatusForbidden)
 			//http.Redirect(w,req,"/",http.StatusSeeOther)
+
 			return
 
 		}
 		if err != nil{
 			http.Error(w,"username or password do not match" ,http.StatusForbidden)
+
 			return
 			//http.Redirect(w,req,"/",http.StatusSeeOther)
 		}else {
@@ -104,7 +107,10 @@ func Login(w http.ResponseWriter,req *http.Request){
 
 	}
 	showSessions()
+
+	//fmt.Fprint(w,checkloginvalue)
 	config.TPL.ExecuteTemplate(w,"/",nil)
+
 
 }
 func Logout(w http.ResponseWriter,req * http.Request)  {
@@ -179,7 +185,7 @@ func Update(w http.ResponseWriter,req *http.Request){
 		http.Error(w,http.StatusText(405),http.StatusMethodNotAllowed)
 		return
 	}
-	fmt.Println("test1")
+
 	up,err := OneUser(req)
 	switch{
 	case err == sql.ErrNoRows:
@@ -188,7 +194,7 @@ func Update(w http.ResponseWriter,req *http.Request){
 	case err != nil:
 		http.Error(w,http.StatusText(500),http.StatusInternalServerError)
 		}
-		fmt.Println("update value",up)
+
 		config.TPL.ExecuteTemplate(w,"updateuser.html",up)
 	}
 func UpdateProcess(w http.ResponseWriter,req *http.Request){
@@ -238,3 +244,13 @@ func DeleteProcess(w http.ResponseWriter,req *http.Request){
 	http.Redirect(w,req,"/userinfo",http.StatusSeeOther)
 
 }
+//check username avalability
+func CheckUserNme(w http.ResponseWriter,req * http.Request)  {
+	if req.Method != "POST"{
+		http.Error(w,http.StatusText(405),http.StatusMethodNotAllowed)
+		return
+	}
+	 checkval :=checkUsernameDb(req)
+	 fmt.Fprint(w,checkval)
+
+	}

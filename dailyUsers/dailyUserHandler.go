@@ -17,7 +17,7 @@ func NumberOfUsersr(w http.ResponseWriter,r *http.Request)  {
 	fmt.Println("request value ####",r)
 	totUser,err := TotDailyUser(r)
 	if err!= nil{
-		fmt.Println("error number 2")
+
 		http.Error(w,http.StatusText(500),http.StatusInternalServerError)
 		return
 	}

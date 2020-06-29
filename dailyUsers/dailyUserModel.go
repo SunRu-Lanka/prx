@@ -74,7 +74,7 @@ func TotDailyUser(r *http.Request)([]DailyUse,error) {
 
 		}
 		dailyUsers=append(dailyUsers,dUser)
-		fmt.Println("daily users value",dailyUsers)
+
 	}
 	if err = rows.Err();err != nil{
 		panic(err)

@@ -28,6 +28,7 @@ header>div {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: row;
 }
 header img{
     width: auto;
@@ -41,7 +42,7 @@ header img{
 
 }
 #topic{
-    width: 55%;
+    width: 30%;
     height: 7vh;
 }
 #topic h2{
@@ -49,6 +50,82 @@ header img{
     font-size: 1em;
     font-weight:bold;
     color:#81c31f ;
+}
+.navheader{
+    width: 25%;
+    height: 7vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.navheader>nav{
+    height: 6vh;
+    width: auto;
+    position: static;
+    margin: 0;
+    float: right;
+    top: 0;
+    display: flex;
+    align-items: center;
+}
+.navheader>nav>ul{
+    display: inline-flex;
+    margin: 0;
+    right: 0;
+    flex-wrap: wrap;
+}
+.navheader>nav>ul>li>a{
+    height: 6vh;
+    line-height: 6vh;
+    padding: 0 50px;
+    border-bottom: none;
+    font-size: 2vw;
+    font-weight: 600;
+    color: #0c5460;
+}
+
+.navheader nav ul li:hover .fa{
+
+    color: #34ce57
+}
+.submenu{
+    display: none;
+
+
+}
+.submenu>ul>li{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+}
+.submenu>ul>li>a {
+    height: 4vh;
+    line-height: 4vh;
+    padding: 0 33px;
+    color: #0b2e13;
+}
+.navheader nav ul li:hover .submenu{
+    display: block;
+    position: absolute;
+    margin-top: 1px;
+    z-index: 1;
+}
+.navheader nav ul li:hover .submenu ul{
+    display: block;
+    margin-left: 0px;
+    height: 4vh;
+    align-items: center;
+}
+.navheader nav ul li:hover .submenu ul li{
+    idth:auto;
+    padding: 0;
+    background-color: #8fd19e;
+    color:#0b2e13;
+    border-bottom:2px solid #0c5460;
+    height: 4vh;
+    margin-left: 0;
+
 }
 #btnLogout{
     width: 19%;
@@ -84,6 +161,7 @@ header img{
     flex-direction: row;
     position: absolute;
     right: 10px;
+    padding: 10px;
 }
 #datePicker>div>div{
     display: flex;
@@ -295,6 +373,160 @@ header img{
 #btnLogout1{
     display: none;
 }
+#logingArt{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 80vh;
+
+}
+#logingArt div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 30%;
+    height: 30vh;
+    border-radius: 10px;
+    border: 2px solid #81c31f;
+    padding: 5px;
+    box-shadow: 3px 5px #81c31f;
+}
+#logingArt>div>form{
+    width: 80%;
+    height:20vh;
+
+}
+.logintext{
+    box-sizing:content-box;
+    width:100%;
+    height: 5vh;
+    padding-left:10px;
+    background-color: #969696;
+    color: #ffffff;
+}
+.logintext:hover{
+    border-color: black;
+}
+#loginsubmit{
+    width: 15%;
+    height: 3vh;
+    float: right;
+    background-color: #0b2e13;
+    color: #cbd3da;
+    font-size: 0.8rem;
+}
+#tbUserInfo{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+}
+#tbUserInfo h4{
+
+    color: #4e555b;
+    font-size: 1.5rem;
+    padding: 1vh;
+}
+#userInfor thead{
+    background-color: #1d2124;
+    color: #ffffff;
+
+}
+#userInfor_length>label{
+    color: #34ce57;
+}
+#userInfor_filter {
+    color: #34ce57;
+}
+
+#userInfor_info{
+    padding: 5px;
+    color: red;
+}
+#userinfor_paginate{
+    color: red;
+}
+#signupsec{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#artsignup{
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+#artsignup h4{
+    color: #4e555b;
+    font-size: 1.5rem;
+    padding: 1vh;
+}
+#signupmaindiv{
+    width: 50%;
+    height: 50vh;
+    background-color:#D3D3D3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#signupmaindiv>form{
+    width: 70%;
+    height: 45vh;
+    border-radius: 10px;
+    border: 2px solid #2c3033;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1vh;
+}
+
+.signupforma{
+    width: 80%;
+    height: 3vh;
+    background-color: #fefefe;
+    font-size: 1rem;
+    color: #272a2d;
+}
+#form-create-user p{
+    color: red;
+    font-size: 1rem;
+}
+#role{
+    float: left;
+    width: 80%;
+    height: 8vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items:flex-start;
+
+}
+.sr{
+    color: #34ce57;
+    font-size: 1rem;
+    float: left;
+    padding-left: 10px;
+}
+#submitbutton{
+    width: 30%;
+    height: 4vh;
+    float: right;
+    background-color: #0b2e13;
+    color: #cbd3da;
+    font-size: 0.8rem;
+}
+
+
+
 
 
 

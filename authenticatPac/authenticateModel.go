@@ -6,6 +6,7 @@ import (
 	"fmt"
 	"github.com/sudesh35139/prx/config"
 	"golang.org/x/crypto/bcrypt"
+	"io/ioutil"
 	"net/http"
 	"strconv"
 	"time"
@@ -18,6 +19,7 @@ type user struct{
 	FirstName string
 	LastName string
 	Role string
+
 }
 type Session struct{
 	Un string
@@ -69,9 +71,9 @@ func SignUser(r *http.Request) (user,error) {
 
 func AllUsersDesc()([]user,error){
 	rows,err := config.DB.Query(" select username,firstname,lastname,role from signup order by id desc")
-	fmt.Println("test 0")
+
 	if err != nil{
-		fmt.Println("test1")
+
 		return nil,err
 	}
 	defer  rows.Close()
@@ -80,20 +82,20 @@ func AllUsersDesc()([]user,error){
 		use := user{}
 		err := rows.Scan(&use.UserName,&use.FirstName,&use.LastName,&use.Role)
 		if err != nil{
-			fmt.Println("test2",err)
+
 			return nil,err
 		}
 		users=append(users,use)
 
 	}
 	if err = rows.Err();err != nil{
-		fmt.Println("test 3",err)
+
 		return nil,err
 	}
 	return users,err
 }
 //page logn process
-func LoginProess(req *http.Request)(user,error){
+func LoginProess(req *http.Request)(user,error,){
 	u := user{}
 
 	userName := req.FormValue("username")
@@ -106,19 +108,17 @@ func LoginProess(req *http.Request)(user,error){
 
 	row := config.DB.QueryRow("select username,password,role from signup where username= ?",userName)
 	err := row.Scan(&u.UserName,&u.Password,&u.Role)
-	fmt.Println("check username",row)
+
 	//empty result
 	if err != nil{
 		fmt.Println("sql error on the result",err)
 		return u,err
-
 		}
 		//comparing password with db and form values
 		errPassword := bcrypt.CompareHashAndPassword([]byte(u.Password),[]byte(password))
 		if errPassword  != nil{
 			fmt.Println("Password dose not match")
 			return u,errPassword
-
 		}
 		Dbusers[u.UserName]=u
 		fmt.Println(u)
@@ -164,7 +164,7 @@ if  u.Password == ""  {
 	bs,err1 := bcrypt.GenerateFromPassword([]byte(u.Password),bcrypt.DefaultCost)
 	fmt.Println("password ",bs)
 	if err1 != nil{
-		fmt.Println("test5")
+
 		return u,errors.New("500 internal server error "+err1.Error())
 
 	}
@@ -177,7 +177,7 @@ if  u.Password == ""  {
 		return u,err
 
 	}
-	fmt.Println("operate u value",u)
+
 	return u,nil
 }
 func DeleteUser(req *http.Request) error {
@@ -194,5 +194,27 @@ func DeleteUser(req *http.Request) error {
 			return errors.New("delete query dosent work")
 	}
 	return nil
+
+}
+//check username avelabilety on signup page
+func checkUsernameDb(req *http.Request)(CheckStatus bool){
+	u := user{}
+	bs,eer :=ioutil.ReadAll(req.Body)
+	if eer != nil{
+		fmt.Println(eer)
+	}
+	userName := string(bs)
+	row := config.DB.QueryRow("SELECT username FROM signup WHERE username = ?",userName)
+	err := row.Scan(&u.UserName)
+	if err == sql.ErrNoRows{
+		CheckStatus = false
+		return
+	}else {
+		CheckStatus = true
+	}
+	if err!=nil{
+		fmt.Println("check row is empty",err)
+	}
+	return CheckStatus
 
 }

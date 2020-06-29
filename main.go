@@ -38,6 +38,7 @@ func main()  {
 	http.HandleFunc("/authenticate/delete/deleterprocess",authenticatPac.DeleteProcess)
 	http.HandleFunc("/login",authenticatPac.Login)
 	http.HandleFunc("/logout",authenticatPac.Authorized1(authenticatPac.Logout))
+	http.HandleFunc("/checkusername",authenticatPac.CheckUserNme)
 	http.Handle("/public/", http.StripPrefix("/public", http.FileServer(http.Dir("./public"))))
 	//http.Handle("/public/",http.StripPrefix("/public",http.FileServer(http.Dir("./public"))))
 	http.ListenAndServe(":4000", nil)
@@ -57,10 +58,8 @@ func usersDetails(w http.ResponseWriter,req * http.Request){
 		return
 	}
 	if !((Us.Role=="user")||(Us.Role=="admin")){
-
 		http.Error(w,"You are not in appropriate account",http.StatusForbidden)
 		return
 	}
-
 	config.TPL.ExecuteTemplate(w,"usersDetails.html",nil)
 }

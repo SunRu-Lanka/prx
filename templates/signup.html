@@ -1,17 +1,88 @@
 {{template "head"}}
 {{template "header"}}
-<form method="POST" action="/authenticatePac/signup/process">
+    <section id="signupsec">
+        <article id="artsignup">
+            <h4> User Signup</h4>
+            <div id="signupmaindiv">
+                <form method="POST" id="form-create-user" action="/authenticatePac/signup/process">
+                    <input type="email" name="username" id="username" class="signupforma" placeholder="email"><br>
+                    <p class="form-field-err" id="username-err"></p>
+                    <input type="text" name="password" id="password" class="signupforma" placeholder="password"><br>
+                    <input type="text" name="password" id="password2"class="signupforma"  placeholder="confirm password"><br>
+                    <p class="form-field-err" id="password-err"></p>
+                    <input type="text" name="firstname" class="signupforma" placeholder="first name"><br>
+                    <input type="text" name="lastname"class="signupforma" placeholder="last name"><br>
+                    <div id="role">
+                        <label class="sr" for="sr">Role</label>
+                        <select name="role" class="sr">
+                            <option value="user">user</option>
+                            <option value="admin">admin</option>
+                        </select>
 
-    <input type="email" name="username" placeholder="email"><br>
-    <input type="text" name="password" placeholder="password"><br>
-    <input type="text" name="firstname" placeholder="first name"><br>
-    <input type="text" name="lastname" placeholder="last name"><br>
-    <label for="sr">Role</label>
-    <select name="role" id="sr">
-        <option value="user">user</option>
-        <option value="admin">admin</option>
+                    </div>
 
-    </select>
-    <input type="submit">
-</form>
+                    <input type="submit" id="submitbutton">
+
+                </form>
+
+            </div>
+        </article>
+    </section>
+
+    <script>
+        var formUser = document.querySelector('#form-create-user');
+        var username = document.querySelector('#username');
+        var p1 = document.querySelector('#password');
+        var p2 = document.querySelector('#password2');
+
+        var nameErr = document.querySelector('#username-err');
+        var pErr = document.querySelector('#password-err');
+        //const userName = document.getElementById("username").value;
+
+        //username must be unique
+        username.addEventListener('input', function(){
+            console.log(username.value);
+            var xhr = new XMLHttpRequest();
+            xhr.open('POST', '/checkusername', true);
+            xhr.addEventListener('readystatechange', function(){
+                if(xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200){
+                   var item = xhr.responseText;
+                    console.log(item);
+                    if (item == 'true') {
+                        nameErr.textContent = 'Username taken - Try another name';
+                        document.querySelector('#submitbutton').disabled = true;
+                    } else {
+                        nameErr.textContent = '';
+                        document.querySelector('#submitbutton').disabled = false;
+                    }
+                }
+            });
+            xhr.send(username.value);
+        });
+        //    Validate passwords
+        //    listen for submit button click
+        formUser.addEventListener('submit', function(e){
+            var ok = validatePasswords();
+            if (!ok) {
+                e.preventDefault();
+                return;
+            }
+        });
+
+        function validatePasswords() {
+            pErr.textContent = '';
+            if (p1.value === '') {
+                pErr.textContent = 'Enter a password.';
+                return false;
+            }
+            if (p1.value !== p2.value) {
+                pErr.textContent = 'Your passwords did not match. Please re-enter your passwords.';
+                p1.value = '';
+                p2.value = '';
+                return false;
+            }
+            return true;
+        };
+
+    </script>
 {{template "footer"}}

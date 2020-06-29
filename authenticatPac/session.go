@@ -53,7 +53,7 @@ func cleanSessions()  {
 		}
 	}
 	DbSessionCleaned = time.Now()
-	fmt.Println("After Cleaned")
+
 
 }
 func showSessions() {
