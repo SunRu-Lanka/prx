@@ -6,12 +6,16 @@ import (
 )
 
 var TPL *template.Template
-var dbSessionsCleaned time.Time
+var DbSessionsCleaned time.Time
+
+
 
 func init()  {
 	TPL = template.Must(template.ParseGlob("templates/*.html"))
-	dbSessionsCleaned = time.Now()
+	DbSessionsCleaned =time.Now()
+
 
 
 
 }
+

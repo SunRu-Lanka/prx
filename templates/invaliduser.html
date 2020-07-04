@@ -1,0 +1,35 @@
+{{template "head"}}
+<header>
+    <div id="logo">
+        <img src="/public/img/logo.jpg">
+    </div>
+    <div id="topic">
+        <h2>PROXIMITY ANALYSIS</h2>
+    </div>
+    <div id="btnLogout2">
+        <button id="logout">Logout</button>
+    </div>
+</header>
+<section id="loginSEc1">
+    <article id="logingArt1">
+        <div>
+            <form method="POST" action="/login" id="form-user-login">
+                <input type="text" name="username" placeholder="email" class="logintext"><br><br>
+                <input type="password" name="password" placeholder="password" class="logintext"><br><br>
+                <input type="submit" value="Login" id="loginsubmit1" >
+                <p class="form-field-err" id="login-error"> invalid username or password</p>
+            </form>
+
+            <div class="restpsaa">
+
+                <a href="/resetpassword">reset password</a>
+
+            </div>
+
+        </div>
+
+
+    </article>
+</section>
+
+{{template "footer"}}

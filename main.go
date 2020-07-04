@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"github.com/sudesh35139/prx/authenticatPac"
 	"github.com/sudesh35139/prx/config"
 	"github.com/sudesh35139/prx/dailyUsers"
@@ -38,7 +39,12 @@ func main()  {
 	http.HandleFunc("/authenticate/delete/deleterprocess",authenticatPac.DeleteProcess)
 	http.HandleFunc("/login",authenticatPac.Login)
 	http.HandleFunc("/logout",authenticatPac.Authorized1(authenticatPac.Logout))
+	http.HandleFunc("/invaliduser",authenticatPac.UserInvalid)
+	http.HandleFunc("/resetpassword",authenticatPac.ResetPawword)
+	http.HandleFunc("/resetpassowrdprocess",authenticatPac.Resetpasswordprocesscheck)
+	http.HandleFunc("/addresetpasswordprocess",authenticatPac.Resetpasswoedprocess)
 	http.HandleFunc("/checkusername",authenticatPac.CheckUserNme)
+
 	http.Handle("/public/", http.StripPrefix("/public", http.FileServer(http.Dir("./public"))))
 	//http.Handle("/public/",http.StripPrefix("/public",http.FileServer(http.Dir("./public"))))
 	http.ListenAndServe(":4000", nil)
@@ -47,6 +53,9 @@ func main()  {
 
 
 func index(w http.ResponseWriter, req *http.Request){
+	Us := authenticatPac.GetUser(w,req)
+	fmt.Println("index user",Us)
+
 	config.TPL.ExecuteTemplate(w,"index.html",nil)
 
 
@@ -61,5 +70,5 @@ func usersDetails(w http.ResponseWriter,req * http.Request){
 		http.Error(w,"You are not in appropriate account",http.StatusForbidden)
 		return
 	}
-	config.TPL.ExecuteTemplate(w,"usersDetails.html",nil)
+	config.TPL.ExecuteTemplate(w,"usersDetails.html",Us)
 }

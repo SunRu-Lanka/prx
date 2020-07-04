@@ -3,6 +3,7 @@ package authenticatPac
 import (
 	"fmt"
 	uuid "github.com/satori/go.uuid"
+	"github.com/sudesh35139/prx/config"
 	"net/http"
 	"time"
 )
@@ -27,6 +28,7 @@ func GetUser(w http.ResponseWriter,req *http.Request)user {
 		DbSessions[c.Value]= s
 		U = Dbusers[s.Un]
 	}
+	fmt.Println("get user ",U)
 	return U
 
 }
@@ -52,7 +54,7 @@ func cleanSessions()  {
 			delete(DbSessions,k)
 		}
 	}
-	DbSessionCleaned = time.Now()
+	config.DbSessionsCleaned= time.Now()
 
 
 }

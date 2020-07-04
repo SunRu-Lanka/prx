@@ -51,6 +51,16 @@ header img{
     font-weight:bold;
     color:#81c31f ;
 }
+#topic1{
+    width: 30%;
+    height: 7vh;
+}
+#topic1 h2{
+    padding-top: 3vh;
+    font-size: 1em;
+    font-weight:bold;
+    color:#81c31f ;
+}
 .navheader{
     width: 25%;
     height: 7vh;
@@ -132,6 +142,7 @@ header img{
     height: 7vh;
 
 }
+
 #logout{
     width: 5rem;
     height: 2.5rem;
@@ -373,6 +384,9 @@ header img{
 #btnLogout1{
     display: none;
 }
+#btnLogout2{
+    display: none;
+}
 #logingArt{
     display: flex;
     align-items: center;
@@ -381,7 +395,7 @@ header img{
     height: 80vh;
 
 }
-#logingArt div{
+#logingArt>div{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -394,6 +408,32 @@ header img{
     box-shadow: 3px 5px #81c31f;
 }
 #logingArt>div>form{
+    width: 80%;
+    height:20vh;
+
+}
+
+#logingArt1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 80vh;
+
+}
+#logingArt1>div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 30%;
+    height: 30vh;
+    border-radius: 10px;
+    border: 2px solid #81c31f;
+    padding: 5px;
+    box-shadow: 3px 5px #81c31f;
+}
+#logingArt1>div>form{
     width: 80%;
     height:20vh;
 
@@ -416,6 +456,26 @@ header img{
     background-color: #0b2e13;
     color: #cbd3da;
     font-size: 0.8rem;
+}
+#loginsubmit1{
+    width: 15%;
+    height: 3vh;
+    float: right;
+    background-color: #0b2e13;
+    color: #cbd3da;
+    font-size: 0.8rem;
+}
+.restpsaa{
+    width: 100%;
+    height: 2vh;
+
+}
+.restpsaa>a{
+    text-decoration: none;
+    font-size: 0.9rem;
+    color: #ff0000;
+    float: right;
+    padding-right: 20px;
 }
 #tbUserInfo{
     width: 100%;
@@ -445,10 +505,10 @@ header img{
 
 #userInfor_info{
     padding: 5px;
-    color: red;
+    color: #ff0000;
 }
 #userinfor_paginate{
-    color: red;
+    color: #ff0000;
 }
 #signupsec{
     width: 100%;
@@ -524,6 +584,130 @@ header img{
     color: #cbd3da;
     font-size: 0.8rem;
 }
+#login-error{
+    color: #ff0000;
+    font-size: 0.9rem;
+}
+#resetpasswordarticle{
+    display: flex;
+    align-items: center;
+    padding-top: 20px;
+    width: 100%;
+    height: auto;
+    justify-content: center;
+}
+#resetpassword{
+    display: flex;
+    align-items: center;
+    width: 30%;
+    height: 20vh;
+    border: 2px solid #c9dbeb;
+    background-color: #f5f5f5;
+    justify-content: space-between;
+    flex-direction: column;
+}
+#resetpassword h2{
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+#resetpassword form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    height: auto;
+}
+#resetpassword label{
+    width: 100%;
+    height: 3vh;
+    background-color: #a7a7a7;
+    color: #071c0d;
+    text-align: center;
+
+}
+#passworduser{
+    width: 100%;
+    height: 5vh;
+    background-color: #a7a7a7;
+    color: #071c0d;
+}
+#passwordresetformsec{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+#resetpsformarticle{
+    width: 50%;
+    height: 35vh;
+    background-color: #f5f5f5;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+#resetpasformdiv{
+    width: 90%;
+    height: auto;
+    border: 2px solid #808080;
+}
+#resetpasformdiv form{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 10px;
+}
+#resetpasformdiv h4{
+    font-weight: 300;
+    font-size: 1.2rem;
+    padding: 2px;
+}
+#formUpdatesec{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    padding: 5vh;
+}
+#formUpdatearticle{
+    width: 50%;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    background-color: #f5f5f5;
+    border: 2px solid #808080;
+}
+#formUpdatediv{
+    width: 80%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 2px;
+    margin: 0;
+}
+#formUpdatediv form{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+#formUpdatediv h4{
+    font-weight: 300;
+    font-size: 1.2rem;
+    padding: 2px;
+    text-decoration: underline;
+
+}
+
 
 
 

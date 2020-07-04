@@ -16,14 +16,12 @@
             <form method="POST" action="/login" id="form-user-login">
                 <input type="text" name="username" placeholder="email" class="logintext"><br><br>
                 <input type="password" name="password" placeholder="password" class="logintext"><br><br>
-                <input type="submit" value="Login" id="loginsubmit" onclick="checkLoginStatus()">
-                <p class="form-field-err" id="login-error"></p>
+                <input type="submit" value="Login" id="loginsubmit" >
             </form>
-
+            <div class="restpsaa">
+                <a href="/resetpassword">reset password</a>
+            </div>
         </div>
     </article>
 </section>
-
-
-
 {{template "footer"}}

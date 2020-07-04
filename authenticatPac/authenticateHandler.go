@@ -78,17 +78,23 @@ func Login(w http.ResponseWriter,req *http.Request){
 
 	if req.Method == http.MethodPost{
 		u,err := LoginProess(req)
+		//var userValid =u.CheckUsers
 
 
 		if err == sql.ErrNoRows{
-			http.Error(w,"username or password do not  match",http.StatusForbidden)
-			//http.Redirect(w,req,"/",http.StatusSeeOther)
+			//http.Error(w,"username or password do not  match",http.StatusForbidden)
+			http.Redirect(w,req,"/invaliduser",http.StatusSeeOther)
+			//u.CheckUsers =false
+			fmt.Fprint(w,u.CheckUsers)
 
 			return
 
 		}
 		if err != nil{
-			http.Error(w,"username or password do not match" ,http.StatusForbidden)
+			//http.Error(w,"username or password do not match" ,http.StatusForbidden)
+			//u.CheckUsers = false
+			//fmt.Fprint(w,u.CheckUsers)
+			http.Redirect(w,req,"/invaliduser",http.StatusSeeOther)
 
 			return
 			//http.Redirect(w,req,"/",http.StatusSeeOther)
@@ -103,16 +109,23 @@ func Login(w http.ResponseWriter,req *http.Request){
 			http.SetCookie(w,c)
 			DbSessions[c.Value] = Session{u.UserName,time.Now()}
 			http.Redirect(w,req,"/usersDetail",http.StatusSeeOther)
+
+			u.CheckUsers =true
+			//fmt.Fprint(w,u.CheckUsers)
 		}
+
+
 
 	}
 	showSessions()
 
-	//fmt.Fprint(w,checkloginvalue)
+
+
 	config.TPL.ExecuteTemplate(w,"/",nil)
 
 
 }
+
 func Logout(w http.ResponseWriter,req * http.Request)  {
 	c,_ := req.Cookie("proximity")
 	//delete the session
@@ -126,7 +139,7 @@ func Logout(w http.ResponseWriter,req * http.Request)  {
 
 	}
 	//clean up dbsessions
-	if time.Now().Sub(DbSessionCleaned)>(time.Second *30){
+	if time.Now().Sub(config.DbSessionsCleaned)>(time.Second *30){
 		go cleanSessions()
 	}
 	http.Redirect(w,req,"/",http.StatusSeeOther)
@@ -171,11 +184,12 @@ func Authorized1(h http.HandlerFunc) http.HandlerFunc {
 }
 func Update(w http.ResponseWriter,req *http.Request){
 	u :=GetUser(w,req)
-	if !AlreadyLoggedIn(w, req) {
-		fmt.Println("login in error1")
-		http.Redirect(w, req, "/", http.StatusSeeOther)
-		return
-	}
+	//if !AlreadyLoggedIn(w, req) {
+	//	fmt.Println("login in error1")
+	//	http.Redirect(w, req, "/", http.StatusSeeOther)
+	//	return
+	//}
+	fmt.Println("user details ",u.Role)
 	if u.Role != "admin"{
 		http.Error(w,"You are not in appropriate account",http.StatusForbidden)
 		return
@@ -213,7 +227,8 @@ func UpdateProcess(w http.ResponseWriter,req *http.Request){
 	}
 	_,err := UpdateUser(req)
 	if err != nil {
-		fmt.Println("test1")
+		fmt.Println("test12222222")
+		panic(err)
 		http.Error(w,http.StatusText(400),http.StatusBadRequest)
 	}
 	http.Redirect(w,req,"/userinfo",http.StatusSeeOther)
@@ -254,3 +269,46 @@ func CheckUserNme(w http.ResponseWriter,req * http.Request)  {
 	 fmt.Fprint(w,checkval)
 
 	}
+func UserInvalid(w http.ResponseWriter,req *http.Request)  {
+	config.TPL.ExecuteTemplate(w,"invaliduser.html",nil)
+}
+func ResetPawword(w http.ResponseWriter,req * http.Request){
+
+	config.TPL.ExecuteTemplate(w,"resetpassword.html",nil)
+}
+func Resetpasswordprocesscheck(w http.ResponseWriter,req * http.Request){
+
+
+	if req.Method !="POST"{
+		http.Error(w,http.StatusText(405),http.StatusMethodNotAllowed)
+		return
+	}
+	fmt.Println("check")
+	reset,err := OneUser(req)
+	switch{
+	case err == sql.ErrNoRows:
+		http.NotFound(w,req)
+		http.Error(w,"Unable to fine username in our system,please check your username or call onewifi admin",http.StatusSeeOther)
+
+		return
+	case err != nil:
+		http.Error(w,http.StatusText(500),http.StatusInternalServerError)
+	}
+	config.TPL.ExecuteTemplate(w,"resetpasswordprocess.html",reset)
+
+}
+func Resetpasswoedprocess(w http.ResponseWriter,req * http.Request)  {
+
+	if req.Method != "POST"{
+		http.Error(w,http.StatusText(405),http.StatusMethodNotAllowed)
+		return
+	}
+	fmt.Println("check twoak")
+	_,err := ResetPasswoedModel(req)
+	if err != nil{
+		http.Error(w,"unable to reset password",http.StatusSeeOther)
+	}
+	http.Redirect(w,req,"/",http.StatusSeeOther)
+
+
+}

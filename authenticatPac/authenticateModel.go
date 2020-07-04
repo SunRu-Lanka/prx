@@ -8,7 +8,6 @@ import (
 	"golang.org/x/crypto/bcrypt"
 	"io/ioutil"
 	"net/http"
-	"strconv"
 	"time"
 )
 
@@ -19,6 +18,7 @@ type user struct{
 	FirstName string
 	LastName string
 	Role string
+	CheckUsers bool
 
 }
 type Session struct{
@@ -132,8 +132,8 @@ func OneUser(req * http.Request)(user,error) {
 		return u,errors.New("400 Bad request")
 	}
 
-	row := config.DB.QueryRow("select id,username,firstname,lastname,role from signup where username= ?",userName)
-	err := row.Scan(&u.Id,&u.UserName,&u.FirstName,&u.LastName,&u.Role)
+	row := config.DB.QueryRow("select username,firstname,lastname,role from signup where username= ?",userName)
+	err := row.Scan(&u.UserName,&u.FirstName,&u.LastName,&u.Role)
 	if err != nil{
 		return u,err
 	}
@@ -141,23 +141,23 @@ func OneUser(req * http.Request)(user,error) {
 	return u,nil
 }
 func UpdateUser(req *http.Request)(user,error){
-u := user{}
-fmt.Println("test2")
-  un :=req.FormValue("id")
-u.UserName = req.FormValue("username")
-u.Password = req.FormValue("password")
-u.FirstName =req.FormValue("firstname")
-u.LastName = req.FormValue("lastname")
-u.Role = req.FormValue("role")
-if  u.Password == ""  {
-	return u,errors.New("bad request 400. username password field can't be empty")
+	u := user{}
+	fmt.Println("test2")
+	//un :=req.FormValue("id")
+	u.UserName = req.FormValue("username")
+	u.Password = req.FormValue("password")
+	u.FirstName =req.FormValue("firstname")
+	u.LastName = req.FormValue("lastname")
+	u.Role = req.FormValue("role")
+	if  u.Password == ""  {
+		return u,errors.New("bad request 400. username password field can't be empty")
 	}
 	//convert id value string to int val
-	unid,errn := strconv.ParseInt(un,0,8)
-	if errn !=nil{
-		return u,errors.New("unable to user id string value to int")
-	}
-	u.Id =int8(unid)
+	//unid,errn := strconv.ParseInt(un,0,8)
+	//if errn !=nil{
+	//	return u,errors.New("unable to user id string value to int")
+	//}
+	//u.Id =int8(unid)
 
 	//password convert to byte
 
@@ -168,9 +168,10 @@ if  u.Password == ""  {
 		return u,errors.New("500 internal server error "+err1.Error())
 
 	}
+	fmt.Println("(((((((((((((((((((((((((((((((((((((((((((((((")
 
 
-	_,err := config.DB.Exec("update signup set id=?,username=?,password =?,firstname=?,lastname=?,role=? where username=?",u.Id,u.UserName,bs,u.FirstName,u.LastName,u.Role,u.UserName)
+	_,err := config.DB.Exec("update signup set username=?,password =?,firstname=?,lastname=?,role=? where username=?",u.UserName,bs,u.FirstName,u.LastName,u.Role,u.UserName)
 	if err != nil {
 		fmt.Println("error is query",err)
 
@@ -216,5 +217,25 @@ func checkUsernameDb(req *http.Request)(CheckStatus bool){
 		fmt.Println("check row is empty",err)
 	}
 	return CheckStatus
+
+}
+func ResetPasswoedModel(req *http.Request) (user,error) {
+	u := user{}
+	u.UserName = req.FormValue("username")
+	u.Password  = req.FormValue("password")
+
+	bs,err1 := bcrypt.GenerateFromPassword([]byte(u.Password),bcrypt.DefaultCost)
+	fmt.Println("password ",bs)
+	if err1 != nil{
+
+		return u,errors.New("500 internal server error "+err1.Error())
+
+	}
+	_,err := config.DB.Exec("update signup set password =? where username=?",bs,u.UserName)
+	if err != nil {
+		fmt.Println("error is query",err)
+
+	}
+	return u,err
 
 }

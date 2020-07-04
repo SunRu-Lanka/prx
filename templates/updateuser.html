@@ -1,17 +1,63 @@
 {{template "head"}}
 {{template "header"}}
-<form method="POST" action="/authenticate/update/updateprocess">
+    <section id="formUpdatesec">
+        <article id="formUpdatearticle">
+            <div id="formUpdatediv">
+                <h4> Update user </h4>
+                <form method="POST" id="form-create-user" action="/authenticate/update/updateprocess">
+                    <input type="email" name="username" placeholder="email" required value="{{.UserName}}" readonly class="signupforma"><br>
+                    <input type="password" name="password" id="password" class="signupforma" placeholder="password"><br>
+                    <input type="password" name="password" id="password2"class="signupforma"  placeholder="confirm password"><br>
+                    <p class="form-field-err" id="password-err"></p>
+                    <input type="text" name="firstname" placeholder="first name"required value="{{.FirstName}}" class="signupforma"><br>
+                    <input type="text" name="lastname" placeholder="last name" required value="{{.LastName}}" class="signupforma"><br>
+                    <div id="role">
+                        <label class="sr" for="sr">Role</label>
+                        <select name="role" class="sr">
+                            <option value="user">user</option>
+                            <option value="admin">admin</option>
+                        </select>
 
-    <input type="text" name="id" placeholder="id" required value="{{.Id}}" readonly>
-    <input type="email" name="username" placeholder="email" required value="{{.UserName}}" readonly><br>
-    <input type="text" name="password" placeholder="password" required autofocus value="{{.Password}}"><br>
-    <input type="text" name="firstname" placeholder="first name"required value="{{.FirstName}}"><br>
-    <input type="text" name="lastname" placeholder="last name" required value="{{.LastName}}"><br>
-    <label for="sr">Role</label>
-    <select name="role" id="sr" >
-        <option  value="user">user</option>
-        <option value="admin">admin</option>
+                    </div>
+                    <input type="submit" id="submitbutton"/>
+                </form>
 
-    </select>
-    <input type="submit"/>
+            </div>
+        </article>
+    </section>
+
+<script>
+    var formUser = document.querySelector('#form-create-user');
+    var p1 = document.querySelector('#password');
+    var p2 = document.querySelector('#password2');
+
+    var pErr = document.querySelector('#password-err');
+
+    //    Validate passwords
+    //    listen for submit button click
+    formUser.addEventListener('submit', function(e){
+        var ok = validatePasswords();
+        if (!ok) {
+            e.preventDefault();
+            return;
+        }
+    });
+
+    function validatePasswords() {
+        pErr.textContent = '';
+        if (p1.value === '') {
+            pErr.textContent = 'Enter a password.';
+            return false;
+        }
+        if (p1.value !== p2.value) {
+            pErr.textContent = 'Your passwords did not match. Please re-enter your passwords.';
+            p1.value = '';
+            p2.value = '';
+            return false;
+        }
+        return true;
+    };
+
+</script>
+
 {{template "footer"}}

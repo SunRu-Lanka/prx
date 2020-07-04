@@ -437,7 +437,7 @@ $(document).ready(function () {
 
 //login page check
 //var formUse =document.querySelector('#form-user-login')
-var  loginsubmit =document.querySelector('#loginsubmit')
+//var  loginsubmit =document.querySelector('#loginsubmit')
 var loginError = document.querySelector('#login-error')
 
 function checkLoginStatus(){
@@ -447,7 +447,7 @@ function checkLoginStatus(){
         if(xhr.readyState == XMLHttpRequest.DONE && xhr.status == 200){
             var item = xhr.responseText;
             console.log(item);
-            if (item == 'true'){
+            if (item == 'false'){
                 loginError.textContent='invalid usename or password'
             }else {
                 loginError.textContent = '';
@@ -458,7 +458,7 @@ function checkLoginStatus(){
 
 
     });
-    xhr.send(loginsubmit)
+    xhr.send()
 
 }
 
